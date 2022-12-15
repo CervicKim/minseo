@@ -1,0 +1,29 @@
+.flex {display: flex;
+        width: 90%;
+        height: 120px;
+        margin: 30px auto;
+        border: 1px solid #ffffff;
+        color: black; }
+
+.flex div{
+        width: 33.3%
+        height: 50px;}
+
+.flex div:nth-child(1){
+    background-color: blueviolet;
+    height: 80px;
+}
+.flex div:nth-child(2){
+    background-color: chartreuse;
+    height : 30px;
+}
+.flex div:nth-child(3){
+    background-color: crimson;
+    height: 60px;
+}
+
+#flex1 {align-items: stretch;}
+#flex2 {align-items: flex-start;}
+
+#flex4 {align-items: center;}
+#flex5 {align-items: baseline;}

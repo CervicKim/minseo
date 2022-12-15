@@ -1,0 +1,60 @@
+/* acc.css */
+
+.accordianMenu{
+                font: 12px/20px 돋움;
+                color: #424242;
+                background: #fff;
+                padding: 10px;
+                width: 500px;
+                margin: 0;
+                }
+
+.accordianMenu h1{
+                margin: 0;
+                font-size: 20pt;
+                text-shadow: 2px 2px 2px #aeaeae;
+                }
+
+.accordianMenu h2{
+                margin: 5px 0; /*위 아래 5px, 왼 오 0*/
+                padding: 0;
+                }
+
+.accordianMenu h2 a{
+                    font-size: 15pt;
+                    display: block;
+                    font-weight: normal;
+                    color: #424242; /*위에서 글씨 색 지정했어도
+                    a 태그가 들어가면 거기에도 따로 색 지정을! 추가로 해야한다!!*/
+                    text-shadow: 2px 2px 2px #aeaeae;
+                    text-decoration: none;
+                    background:-webkit-gradient(linear,left top,
+                    left bottom,from(red),to(rgb(153, 0, 255)));
+                    background: -moz-linear-gradient(top,#d4f4fa
+                    #6799ff);
+                    -webkit-border-radius:5px;
+                    -moz-border-radius:5px;
+                    border-radius: 5px;
+                    height: 50px;
+                    line-height: 50px;
+                    }
+
+.accordianMenu:target h2 a , .accordianMenu h2 a:hover{
+    background:-webkit-gradient(linear,left top,left bottom,from(orange),to(red)); 
+    /*기존색이랑 반대로 조합하면? 커서 댔을 때 색이 바뀌어서 이뿌당*/
+/* target : 호버를 하고, 클릭을 하고 나서도 적용된 효과가 도로 돌아가지 않게 고정한다!!!!!!
+클릭하고, 떼고나서도 여전히 오렌지레드. */
+font-weight: 800;}
+
+.accordianMenu p{
+                padding: 0 10px;
+                margin: 0;
+                height: 0;
+                overflow: hidden;
+                -webkit-transition: height 0.3s ease-in;
+                transition: height 0.3s ease-in;}
+
+.accordianMenu :target p{
+                        height: 100px;
+                        overflow: auto;
+                        }

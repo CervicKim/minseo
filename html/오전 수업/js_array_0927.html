@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var apple_box = new Array();
+        apple_box.push(68); //배열 0부터 시작해서~
+        apple_box.push(65);
+        apple_box.push(61);
+        apple_box.push(69);
+        apple_box.push(66); //마지막 index는: 4임!
+
+    //반복문으로 만들자. why?: 좀 더 쉽게 배열을 표현할 수 있다.
+        for(var i=0; i<5; i++){
+            document.write(apple_box[i]+"<br>"); //=> 출력값 6865616966 ///// +"<br>" =>한 줄씩 띄어서 나옴!
+        }
+//---------------------
+    //사과박스에 사과가 평균 몇 개 담겨있는지 확인.
+
+        var total_apple = 0; // 총합 값을 낼 거 하나 마련하고
+        for(var i=0; i<apple_box.length; i++){ //배열할 데이터 수가 총 몇 갠지 일일히 세지않는 방법! i<배열이름(의).길이;를 넣는다!!
+            total_apple = total_apple + apple_box[i]; //총합에 총합값+박스의배열들이 대입된다!
+        }
+        document.write("사과상자 평균 갯수 :"+ total_apple / apple_box.length+"<br>"); //>평균값< 구하기니까 총합을 갯수만큼 나누기!(/)
+//-----------------------
+    //각 사과박스에서 사과상자평균치와 비교했을 때 몇 개 차이가 있는지 출력
+    //사과상자 평균값은 정수로
+    //출력 예시) 1번사과상자 : 3개
+             //2번 사과상자 : 0개...
+
+        //틀린 나의 답..
+        // var n = apple_box.length;
+        // var apples = 0;
+        // for(var i=0; i<apple_box.length; i++){
+        //     apples = apples + apple_box[i];
+        // }
+        // if (parseInt(apples) != total_apple){
+        //     document.write("<br>"+n+"번사과상자 :" + parseInt - total_apple);
+        // }
+
+        //선생님 답
+        var avg = parseInt(total_apple / apple_box.length); //사과평균값 = 사과총합 /(나누기) 상자배열길이
+
+        for(var i=0; i<apple_box.length; i++){
+            document.write(
+               i + 1 +'번째 사과상자 :' + (apple_box[i] - avg) + "개<br>",
+            ); //i는 0부터 시작하니까! 0+1번!
+        }
+//------------------------
+        // 1상자에 들어가는 고구마 수량을 입력하기.
+        // 고구마 1개의 무게는 200g. //어려운 버전:(200~400)g (랜덤!)
+        // 어려운 버전: - 고구마 1상자 kg당 10000원 -
+        // 원하는 고구마 수량을 입력하여-> 1개씩의 고구마상자의 무게는 몇kg? result 출력하기. //어려운버전: 판매가격 ?원 빼셈.
+
+        //갈피도 못 잡은 나의 답ㅠ
+    // go_box = 0;
+    // go_one = 0;
+
+    // go_box = #quan
+
+    // function getRandomIntclusive(min, max){
+    //     min = Math.ceil(200);
+    //     max = Math.floor(400);
+    //     return Math.floor(Math.random()* (max - min +1))+min;
+    // }
+    // document.write(Math.floor)
+
+        //선생님 답
+    var sweet_quan = new Array(); //박스 개당 들어가는 고구마 개수./ quan(tity): 분량 <- 이것도 선생님이 지은 이름..
+    var sweet_kg = new Array(); //상자 무게
+
+    function enroll(){ //enroll: 등록 <- 선생님이 임의로 지은 이름..
+        var quan = document.querySelector("#quan"); 
+        var num = parseInt(quan.value);//입력한 고구마수량
+        sweet_quan.push(num);
+        let kg = (num*200)/1000; //고구마 한 상자 무게(kg)
+        sweet_kg.push(kg);
+
+        var res = document.querySelector("#result");
+        var out = "";
+        for(var i=0; i<sweet_quan.lenth; i++){
+            out += (i+1)+"번째 고구마상자" + sweet_kg[i]+"kg("+ sweet_quan[i]+"개) <br>";
+        }
+        res.innerHTML = out;
+    }
+
+    </script>
+</head>
+<body>
+    <div>
+    <input type="number" id="quan" placeholder="고구마 수량 입력">
+    <button onclick = "enroll()">입력</button>
+    </div>
+    <div id="result"></div> <!--고구마 문제. 입력란 제시해주신거.-->
+</body>
+</html>

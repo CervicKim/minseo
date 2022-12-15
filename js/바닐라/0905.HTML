@@ -1,0 +1,98 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        //배열 & for문
+        var array = [3, 10, 8]
+        //배열 0번째 출력
+        console.log(array[0]); //방법 1.
+
+        var item = array[0];
+        console.log(item); //방법 2.
+
+        var result = 0;
+        var item1 = array[1]; // 10
+        var item2 = array[2]; // 8
+        result = item1 + item2;  // 10+8
+
+        // for(var i=0; i<array.length; i++){
+        //console.log(array[i]);
+        //     sum = sum + array[i];
+        // }
+        // console.log(sum);
+
+        var array1 = [2,2,9,2,5]
+        //문 1. for문을 이용해서 array1에 2가 몇번 들었는지 카운트하시오
+        
+        
+        var count = 0; //카운트 할 변수.
+        //배열이 0부터 시작해서 i는 0부터 세는거다.
+
+        for(var i=0; i<array1.length; i++){ 
+            var x = array1[i]; //if 안에 로직이 하나뿐이면 그냥 중괄호 생략하고 횡렬로 써도 된다. 
+            if(array1[i] == 2){
+                count++;
+            }
+        }
+        console.log("2는"+count+"회 있습니다.");
+
+        // var result0 = 0
+        // var arr1 = array[0]; //2
+        // var arr2 = array[1]; //2
+        // var arr3 = array[2]; //9
+        // var arr4 = array[3]; //2
+        // var arr5 = array[4]; //5
+
+
+2//문 2. for문을 이용해서 array1에 있는 모든 숫자를 더하는데, 더한 수가 10이상이면 break하시오.
+        
+        // result0 = arr1 + arr2 + 
+        var sum = 0;
+        for(var i=0; i<array1.length; i++){
+            sum = sum + array1[i];
+            if(sum >= 10){
+                console.log('문제 2번');
+                break;  //조건 달성시ㅏ 더이상 실행x 중단!
+            }
+        }
+
+
+//문 3. for문을 이용해서 array1에 있는 숫자 중 최댓값을 구하시오.
+3// var array1 = [2,2,9,2,5]
+        var max = 0; //최대값을 대입할 변수
+        for (var i=0; i<array1.length; i++){
+            var x = array1[i];
+            if(max < x){
+                max = x;
+            }
+        }
+        //문 0. for문을 이용해서 배열안에 있는 숫자 출력하기.
+        
+        // for (var i=0; i<array1.length; i++){
+            
+        // }
+        
+        ////////////////////포인트: for문 안에 for문(2중for문)을 사용하기도 하는 구나~! (실무에서 잘 쓰이는 건 아님.)
+        
+        for(var i=2; i<=5; i++){ //outer for
+            console.log('구구단을 시작합니다.'+i+'단부터 시작!');
+            for(var j=1; j<=9; j++){ //inner for
+                console.log(i+'*'+j+'='+(i*j));
+            }
+            console.log(i+'단 종료');
+        }
+
+
+        var * = 0;
+
+</script>
+
+</html>

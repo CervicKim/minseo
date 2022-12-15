@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{margin: 0;
+         padding: 0;
+         box-sizing: border-box;}
+
+    .container{width: 1000px;
+               height: 400px;
+               background-color: indianred;
+               margin: 120px auto;
+               display: flex;}
+
+    .col:nth-child(1){background-color: chocolate;}
+    .col:nth-child(2){background-color: olive;}  
+    .col:nth-child(3){background-color: lightseagreen;}
+
+    .col{
+        height: 100%;
+        color: rgb(255, 255, 255);
+        padding: 25px;
+        flex: 1; /* flex: 뒤의 컨테이너가 삐져나오지 않게 꽉 채워주는 역할도 함!!*/
+        transition: 1s;
+        position: relative;}
+
+    .col img{
+        width: 300px;
+        height: auto;
+        position: absolute;
+        margin: 10;
+        }
+
+    h2{text-align: center;
+       font-size: 22px;
+       font-weight: 600;}
+
+    .caption{
+        width: 230px;
+        font-size: 20px;
+        font-family: 돋움체;
+        margin-top: 28px;
+        display: none;
+        
+    }
+    .caption button{
+        border: 2px solid wheat;
+        background-color: beige;
+        border-radius: 30px;
+        outline: none;
+        padding: 8px 18px;
+        font-size: 13px;
+        font-family: 돋움체;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    .col:hover .caption{display: block;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h2>강아지 세상</h2>
+            <div class="caption">
+                <p>강아지 귀엽당</p>
+                <button>더 알고 싶나요?</button>
+            </div>
+            <img src="puppy1.jpg">
+        </div>
+
+        <div class="col">
+            <h2>뽀송뽀송 푹신이</h2>
+            <div class="caption">
+                <p>ㅠㅠ 뽀시래기</p>
+                <button>입양신청 및 문의</button>
+            </div>
+            <img src="puppy2.jpg">
+        </div>
+
+        <div class="col">
+            <h2>코가 축축한 강아지~</h2>
+            <div class="caption">
+                <p>한입에 쏘옥;</p>
+                <button>깡쥐호옵로로롭</button>
+            </div>
+            <img src="puppy3.jpg">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    //위에 존나 졸았음... 적자
+
+    document.querySelector('#num'); // id라서 샵 붙인거임!
+    document.querySelector('.클래스명'); //클래스니까 .
+    document.querySelectorAll('.클래스명'); // 클래스
+    document.querySelectorAll('태그명'); // 태그명
+    document.querySelectorAll('[name명]') // 이름
+
+    function data_push(){ //input 태그 가져오기
+        var number = document.getElementById('num');
+        var val = parseInt(number.value)
+
+
+
+
+
+//id가 result인 div 태그 가져오기
+//입력값이 짝수인지 홀수인지 출력하시오. if문쓰기
+    var res = document.getElementById('result');
+    if(res%2 == 0)
+    res.innerHTML = "짝수다."; //div태그 안에 값 넣어주기
+    else
+        res.innerHTML="홀수다";
+    }
+</script>
+</head>
+<body>
+    
+</body>
+</html>

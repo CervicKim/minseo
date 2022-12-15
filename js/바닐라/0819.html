@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 여기에 스타일. = css! -->
+</head>
+<!-- 여기에 html -->
+<body>
+    <input id="memo" input type="text">
+    <input id="name" input type="text">
+    <input id="apple" input type="text">
+    <button onclick="test()">확인</button>
+    <button onclick="test()">확인</button>
+<!-- 문제 2 -->
+    <h3>숫자 입력 받기</h3>
+    <input id="num" type="number">
+    <button onclick="test02()">확인</button>
+
+<!-- 문제3 주문 수량 20개이상 입력시 "죄송합니다 인당 20개 미만 주문 가능"팝업뜨기./ 함수를 직접 생성하시오!-->
+    <h3>주문 수량 받기</h3>
+    <input id="count" type="number">
+    <button onclick="test03()">주문</button>
+
+<!-- 문제 4.  -->
+    <h3>메뉴 선택 하기</h3>
+      <select id="menu">
+        <option value="앗메리마노">앗메리마노</option>
+        <option value="원조">원조</option>
+        <option value="빽스">빽스</option>
+        <option value="연유">연유</option>
+      </select>
+      <button onclick="test04()">선택 완료</button>
+
+</body>
+<!-- 여기에 JavaScript. JAVA는 BODY 밑에 둔다. why? html부터 해석하고 script 해석해야 좋아서!-->
+<script>
+    // function란? 함수 or 메소드.라고 한다! 
+    function test(){
+        // input에 입력한 값 출력하기!
+        // ver : 데이터 타입 (값 타입)
+                // document란?: HTML이란 뜻이다. 이름이달라서 ㄱ-ㅋㅋ
+                // get : 얻다
+                // Element : 태그
+                // ById : 바이 아이디. ~로 아이디
+                // Value : 값
+        var memo = document.getElementById("memo").value;
+        // alert : 알림 (팝업창.)
+        alert(memo);
+        // 문제 1. id 이름이 name인 input값 alert()로 출력하시오
+        var name = document.getElementById("name").value;
+        alert(name);
+        var apple = document.getElementById("apple").value;
+        alert(apple);
+    }
+        function test02(){
+                var num = document.getElementById("num").value;
+                // if(만약에 ~라면) 배우기
+
+                // 만약에 num이 10 이상이라면?
+                if(num >= 10){ // if 시작 습관들여서잘써야해!
+                    alert('10 이상입니다!');
+
+                } // if 끝부분! 습관들여서 잘 써야해!
+                else{ // else는 if의 반대. 10이상이 아니라면 10미만이라고 알리자.
+                    alert('10 미만입니다.');
+                }
+            }
+
+        function test03(){
+            var count = document.getElementById("count").value;
+            if(count >= 20){
+                alert('죄송합니다 인당 20개 미만 주문 가능합니다.')}
+            else{
+                alert('주문완료') ;
+            }
+        }
+            
+                
+        function test04(){ //함수시작
+            var menu = document.getElementById("menu").value;
+            alert(menu); // 저 menu에 큰 따옴표 붙이면 메뉴를 알려주는게아니라 "menu"를 말 하게 됨..ㅋㅋ
+            // == : 같다. 
+            //  만약에 내가 원조를 선택한다면 알람을 띄어줘라.
+            // 문제 4. 만약 선택한 메뉴가 빽스라면 "ㅈㅅ합니다 빽스는 품절입니다" 알람띄우기.
+            if(menu == '원조'){
+                alert('선택한 메뉴'+ menu);
+            }
+            if(menu == '빽스'){
+                alert('죄송합니다 선택하신'+ menu +'는 품절입니다.')
+            }
+        }//함수끝
+        
+
+
+
+
+</script>
+</html>

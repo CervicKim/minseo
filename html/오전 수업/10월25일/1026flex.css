@@ -1,0 +1,20 @@
+
+.flex{
+    display: flex;
+    width: 500px;
+    height : 50px;
+    margin-bottom: 50px;
+}
+.flex div:nth-child(0){
+    background-color: oran;
+}
+
+.flex div:nth-child(1){
+    background-color: brown;
+}
+.flex div:nth-child(2){
+    background-color: rgb(42, 165, 108);
+}
+.flex diov:nth-child(3){
+    background-color: brown;
+}

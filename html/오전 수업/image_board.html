@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image_board.html</title> <!--이미지로 갤러리 게시판 만들기!-->
+    <link rel="stylesheet" type="text/css" href="image_board.css">
+</head>
+<body>
+    <div id="image_mask">
+        <div id="image_wrap">
+            <div class="image_title">
+                <div class="title_wrap">
+                    <b>갤러리</b> <!--밑줄 넣고 싶을때 <u></u>도 되지만 모양이 안 예뻐서 css에다가~-->
+                </div>
+
+            </div>
+            <div id="image_list">
+                <div class="line_wrap">
+                    <div class="cell cell_one">1
+                        <div class="image_area" style="background: url(봄날은간다.jpg) no-repeat center center; background-size:cover ;">
+                            <!-- background-size:cover ::지정한 요소를 다 덮도록 배경이미지를 확대/축소 -->
+                            <a href="gallery_view.html?name=봄날은간다&type=jpg&title=봄날은간다."></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html?name=봄날은간다.&type=jpg&title=봄날은간다.">봄날은 간다.</a></div>
+                    </div>
+                    <div class="cell cell_two">2
+                        <div class="image_area" style="background: url(올드보이.jpg) no-repeat center center; background-size:cover ;">
+                            <!-- 3. 직접 스타일을 멕여서. -->
+                            <!-- <img src="">여기가 1번 방법-->
+                            <a href="gallery_view.html?name=올드보이&type=jpg&title=올드보이"></a> </div>
+                        <div class="title"><a href="gallery_view.html?name=올드보이&type=jpg&title=올드보이">올드보이</a></div>
+                    </div>
+                    <div class="cell cell_three">3
+                        <div class="image_area" style="background: url(친절한금자씨.jpg) no-repeat center center; background-size:cover ;">
+                            <a href="gallery_view.html?name=친절한금자씨&type=jpg&title=친절한금자씨"></a> </div>
+                        <div class="title"><a href="gallery_view.html?name=친절한금자씨&type=jpg&title=친절한금자씨">친절한 금자씨</a></div>
+                    </div>
+                </div>
+                
+                <div class="line_wrap">
+                    <div class="cell cell_one">4
+                        <div class="image_area" style="background: url(미드소마.jpg) no-repeat center center; background-size:cover ;">
+                            <a href="gallery_view.html"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html">미드소마</a></div>
+
+                    </div>
+                    <div class="cell cell_two">5
+                        <div class="image_area" style="background: url(놉.jpg) no-repeat center center; background-size:cover ;">
+                            <a href="gallery_view.html"></a></div>
+                        <div class="title"><a href="gallery_view.html">놉</a></div>
+                    </div>
+                    <div class="cell cell_three">6
+                        <div class="image_area" style="background: url(헤어질결심.jpg) no-repeat center center; background-size:cover ;">
+                            <a href="gallery_view.html"></a> </div>
+                        <div class="title"><a href="gallery_view.html">헤어질결심</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

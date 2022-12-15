@@ -1,0 +1,26 @@
+/* absolute: 자리에 누가 앉았든간에. 일렬로 고정시켜주마.
+   relative: 자리 다 찼으면 그 다음 자리에 앉움. */
+.box{position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.d1{background-color: red;}
+
+.d2, .d3 {width: 100px;}
+
+.d2{
+    background-color: orange;
+    left: 25px; top: 25px;
+    z-index: 100;
+    position: fixed;
+    
+    }
+.d3{height: 2000px;
+    background-color: green;
+    left: 50px; top: 10px;}
+    
+body{
+    margin: 0;
+    padding: 0;
+}

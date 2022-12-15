@@ -1,0 +1,48 @@
+-- 고객 정보 테이블 생성 ===================
+create table Customer_Information(
+		User_ID varchar(30) PRIMARY KEY,
+		Name varchar(30) comment '이름',
+		Date_Of_Birth date comment '생년월일',
+		Age	int(11) comment '나이',
+		Address varchar(30) comment '주소',
+		Phone_number int(11) comment '핸드폰 번호',
+		E_mail varchar(30) comment '이메일 주소');
+
+-- 회원 관리 테이블 생성 ==================
+create table membership_management(
+		Approval_Number int(4) AUTO_INCREMENT PRIMARY KEY,
+		Means_Of_Payment varchar(11) comment '결제수단',
+		Payment_Date date comment '결제일',
+		Payment_Expiration_Date date comment '결제 만료일',
+		Member_Ship varchar(30) comment '멤버쉽',
+		Price int(4) comment '가격',
+		Join_Date Date comment '가입 날짜',
+		Dormant_Account_Status varchar(30) comment '휴면계정 여부',
+		Adult_Authentication varchar(30) comment '성인인증 여부',
+		Withdrawal_Status varchar(30) comment '탈퇴 여부',
+		User_ID varchar(30) comment '고객 ID',
+		Business_Number varchar(4) comment '사업자 번호');
+		
+-- OTT 테이블 생성 ============	
+create table OTT(
+		Business_Number varchar(4) PRIMARY KEY,
+		Corporate_name varchar(30) comment '회사명',
+		Representative_Name varchar(30) comment '대표자명',
+		Company_Address	varchar(30) comment '회사 주소',
+		email varchar(30) comment '회사 이메일',
+		Date_of_establishment date comment '회사 설립일',
+		App_Store_Ratings varchar(30) comment '앱스토어 평점',
+		Play_Store_Ratings varchar(30) comment '플레이스토어 평점');
+
+	
+-- OTT_영상 테이블 생성 ============	
+create table OTT_content(
+		Unique_number varchar(30) PRIMARY KEY,
+		Video_Type varchar(30) comment '영상타입',
+		Genre varchar(30) comment '장르',
+		GPA	varchar(30) comment '평점',
+		Total_Number_of_episodes int(4) comment '회차수',
+		video_Rating varchar(30) comment '관람등급',
+		year_of_public_open int(4) comment '공개 년도',
+		video_title varchar(30) comment '영상 제목',
+		Business_Number int(4) comment '사업자번호');

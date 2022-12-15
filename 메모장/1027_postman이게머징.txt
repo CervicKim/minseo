@@ -1,0 +1,26 @@
+API = 대형 데이터공유 플랫폼
+
+postman 검색
+윈도우로 다운 실행
+
+백엔드 프론트엔드끼리 회의할 때 쓰는 거래 ...? @ㅡ@?!
+
+///
+
+ID - Title
+문제: 영화 상세정보 조회: 링크 직접 짜기.
+http://www.omdbapi.com/?apiKey=764ed67&i=tt1632708&plot=full
+&s=friends&type=series
+
+문제: 2018년 개봉, 제목에 Love가 들어간 API 조회.
+
+http://www.omdbapi.com/?apiKey=764ed67&y=2018&s=Love&type=movie
+
+문: 2015년에 개봉한, love가 들어간 에피소드 중 결과는 3페이지만 보고싶을때!
+http://www.omdbapi.com/?apiKey=764ed67&type=episode&t=Love&y=2018&page=3
+
+
+<script src='../js/tilt.js'></script>
+못한 거 : 
+tilt 적용해서 포스터가 움직이기
+클릭하면 영화 상세정보 뜨는 거.....

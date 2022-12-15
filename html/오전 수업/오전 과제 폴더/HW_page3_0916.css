@@ -1,0 +1,28 @@
+/* HW_page3_0916.css */
+
+body, div, ul{
+    padding: 0;
+    margin: 0;
+            }
+
+#header_wrap{
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+            }
+
+#global_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    background-color: brown;
+            }
+
+#utill{
+    float:right; /*우측으로 배치*/
+    width:500px;
+    list-style-type:none; /*ul쓸 때 자동으로 생기는 점 없애기.*/
+    display:inline-block;
+    vertical-align:middle;
+    padding:9px 0 10px 0;
+    }

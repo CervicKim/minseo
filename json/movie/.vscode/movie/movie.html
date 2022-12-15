@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해외영화 사이트</title>
+    <link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+  rel="stylesheet"/>
+<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"/>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>민서의 영화나라</h2>
+        </div>
+        <div class="movie-row">
+            <div class="item">
+            <div id="movie-0" class="poster"></div>
+            </div>  
+            <div class="item">
+                <div id="movie-1" class="poster"></div>
+            </div>
+            <div class="item">
+                <div id="movie-2" class="poster"></div>
+            </div>
+            <div class="item">
+                <div id="movie-3" class="poster"></div>
+            </div>
+            <div class="item">
+                <div id="movie-4" class="poster"></div>
+            </div>
+        </div>
+        </div>
+
+        <div class="series-row"> <!--클래스 이름에 row가 있다면?? 아~ 곧 flex를 줄 예정이구나~ 하고 알아두셈-->
+            <div id="movie-0" class="poster"></div>
+            <div id="movie-1" class="poster"></div>
+            <div id="movie-2" class="poster"></div>
+            <div id="movie-3" class="poster"></div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+crossorigin="anonymous"></script>
+
+        const API_KEY = '764ed67';
+        initMovie(); //함수 호출
+
+        function initSeries(){
+            for (var i=0; i<4; i++){
+            //시리즈 포스터 5개 가져오기
+            var posterUrl = response.Search[i].Poster;
+            //img 태그 생성, 포스터 이미지 경로 src에 넣기.
+            var html = '<img src="'+ posterUrl +'">';
+            //id가 movie-0 ~ movie-4인 태그에 영화포스터사진 append하기!
+            $('#Series-'+i).append(html);
+        }
+        var type = 'movie';
+        $ajax({url: 'http://www.omdbapi.com/?apiKey='+API_KEY+'&s='+search+'&type='+type+'',
+        type: 'GET',
+        dataType: 'json',
+
+        success: function (response){
+            //movie-5
+            for (var i=0; i<4; i++){
+            //영화 포스터 5개 가져오기
+            var posterUrl = response.Search[i].Poster;
+            //img 태그 생성, 포스터 이미지 경로 src에 넣기.
+            var html = '<img src="'+ posterUrl +'">';
+            //id가 movie-0 ~ movie-4인 태그에 영화포스터사진 append하기!
+            $('#movie-'+i).append(html);
+            }
+        })
+    
+</script>
+</body>
+</html>

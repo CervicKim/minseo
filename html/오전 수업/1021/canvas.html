@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // if(window.HTMLCanvasElement) /*브라우저마다 캔버스 지원이 안되기도 해서 확인 해보는 거임.*/
+        //     alert('캔버스 지원 가능!!');
+    </script>
+</head>
+<body>
+    <canvas id='canvas' width="2000" height="800"></canvas>
+</body>
+</html>
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d'); //투디 그림을 그릴 수 있는 캔버스 개체
+    ctx.fillStyle='rgb(100,200,200)';
+    ctx.fillRect(10,10,50,50); // 앞 두 개는 좌표, 뒤 두개는 너비 값.
+
+    ctx.fillStyle='rgb(200,0,0)';//무슨 모양으로 어떻게 칠하건, 형태 이전에 색부터 정해야한다!!
+    ctx.fillRect(100,100,100,50); // 필스타일, 필렉트 = 색 꽉 채우기
+
+    ctx.strokeStyle = 'rgb(50,200,100)'; //스트로크스타일, 스트로크렉트 = 선만 칠하기!
+    ctx.strokeRect(100,120,70,150);
+
+    ctx.beginPath(); //선 시작!
+
+    ctx.moveTo(50,50) //선 시작
+    ctx.lineTo(200,200); 
+    
+    ctx.strokeStyle = 'rgb(0,0,100)';
+    ctx.moveTo(50,50) //선 시작
+    ctx.lineTo(200,200); 
+
+    ctx.moveTo(100,100);
+    ctx.lineTo(500, 50);
+    // 삼각형
+    ctx.moveTo(300, 300);
+    ctx.lineTo(400, 300);
+    ctx.lineTo(350, 400);
+
+    ctx.closePath();
+    ctx.stroke(); //선만잇어서 st록크.
+//=====10/24 월 ================================
+
+    // 원 그리기!
+    ctx.beginPath();
+    ctx.arc(500,500,50,0,2*Math.PI,true); //pi가 들어가니까 원!
+    ctx.closePath();
+    ctx.fillStyle='pink';
+    ctx.fill();
+    ctx.stroke();
+
+</script>

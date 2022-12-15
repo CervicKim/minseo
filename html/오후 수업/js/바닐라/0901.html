@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    for(var i=1; i<=30; i++){
+        console.log(i)
+        }
+        // 배열 : [] 대괄호(array)
+        var array = ['바나나','딸기','사과','수박'];
+        // == 위 식은 아래 식들과 같다. 
+        //var banana = '바나나';
+        //var apple = '사과';
+        //ver str = '딸기'; 한번에 요약 가능!
+
+        console.log('배열을 출력합니다')
+        console.log(array[0]); //바나나출력
+        console.log(array[1]); //사과
+        console.log(array[2]); //딸기 출력
+        console.log(array[3]); //수박!
+        console.log('배열 길이는 : '+array.length);
+
+        //배열은 for문하고 같이 사용한다.
+        //for문을 이용해서 배열 출력하기.
+
+        for(var i=0; i<array.length; i++){
+            //console.log(array[i]); //배열 출력
+            var x = array[i]; //대입도 가능하다
+        }
+        console.log('출력종료');
+
+        //문제 1. for문을 이용해서 배열 짝수 개수 구하기.
+        var array2 = [1,4,8,10];
+        var count = 0; //카운팅 하는 변수.
+        for(var i=0; i<=array2.length; i++){ //array2.length == array 안에 있는 데이터의 갯수 (여기서는 1,4,8,10 이니까 4개.)
+            if(i%2 == 0){
+                count++;
+                console.log(count);
+            }
+            
+        }
+        
+</script>
+</html>

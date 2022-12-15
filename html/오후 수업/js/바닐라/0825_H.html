@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="yourId" type="text" placeholder="아이디입력">
+    <input id="yourPassword" type="password" placeholder="비밀번호 입력">
+    <input id="yourRePassword" type="password" placeholder="비밀번호 재입력">
+    <input id="yourEmail" type="email" placeholder="이메일 입력">
+    <button onclick="doJoin()">회원가입</button>
+</body>
+<script>
+    function doJoin(){
+         //함수시작 //함수란? 동작을 실행해주는 기능!! (버튼을 눌렀을 때 실행될 기능!) function==기능
+
+        var data = document.getElementById('yourId').value;
+            if(data == ''){//''<-는 아무것도 입력 안했다는 뜻!!! 빈칸 체크 기능
+            alert('아이디를 입력해주세요') 
+                document.getElementById('yourId').focus();
+            return false;
+        } 
+
+        var yourPassword = document.getElementById('yourPassword').value;
+            if(yourPassword == ''){
+            alert('비밀번호를 입력해주세요') 
+                document.getElementById('yourPassword').focus();
+                return false;
+            }
+
+        var yourRePassword = document.getElementById('yourRePassword').value;
+            if(yourRePassword == ''){
+                alert('비밀번호 재입력!!')
+                return false;
+            }
+
+        var email = document.getElementById('yourEmail').value;
+            if(email == ''){
+            alert('이메일을 입력하시오')
+            return false;}//return은 더이상 아래코드를 실행하지 않는다. (아이디 안쳤다고 알려주는 걸로 끝. 비번도 알려ㅑ주지않고끝낸다.)
+            //이걸 한 단락마다 달면? 실수를 하면 실수한 것만 알려주고 뒤에 회원가입완료!까지 안 알려ㅑ주게됨!!
+
+            if(yourPassword != yourRePassword){
+                alert('비밀번호가 서로 일치하지 않습니다.')
+                return false;
+            }
+
+        alert("회원가입 완료")
+
+// 스크립트 중괄호 안(조건문)에는 ; 붙이는 게 아니다!!!!
+
+    }//함수끝. 
+</script>
+</html>

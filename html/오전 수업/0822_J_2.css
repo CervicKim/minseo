@@ -1,0 +1,7 @@
+/* 0822_J_2.css */
+
+#box{
+    display: flex;
+    width:600px;
+    flex-wrap: wrap;
+}

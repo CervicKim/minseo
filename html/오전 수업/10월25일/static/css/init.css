@@ -1,0 +1,36 @@
+/*속도를 빨리 내는 법!
+공통된 효과를 줄 곳은 같은 태그<h3>등.. 을 넣고
+일괄 효과를 준다. 빠르다~!*/
+
+.h1-txt{
+        font-size: 2.1rem;
+        margin: 0.8rem 0.6rem;
+        }
+
+.h2-txt{
+    font-size:1.6rem;
+    margin:0.6rem 0.3rem;
+}
+
+.h3-txt{
+        font-size: 1.3rem;
+        margin: 0.5rem 0;
+}
+
+.txt-white{
+    color:white;
+}
+/*원하는 효과를 (h1 h2 h3..)미리 만들어두고
+필요한 곳에 미리 적용, 나중에 클래스 이름을 
+수정해서 원하는 효과로 바로 적용할 수 있게!
+이 css 목록을 저장해놓고~ 
+작업할 때마다 갖다쓰면? 시간절약 굿!!*/
+.txt-pink{
+    color: pink;
+    font-weight: 800;
+}
+.imgb1{
+    width : 36%;
+    background-color: brown;
+    font-size : 5vmin;
+}

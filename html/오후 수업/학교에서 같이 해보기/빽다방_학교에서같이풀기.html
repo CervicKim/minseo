@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .MENU_BOX{width: 400px;
+             height: 600px;
+             background-color: aquamarine;
+             margin:100px auto;}
+    h2{text-align: center;
+       padding-top: 100px;}
+    select{width: 80%; height: 40px;}
+    input [type=number] {width: 90%; height: 50px;}
+    text{width: 80%; height: 200px;}
+</style>
+</head>
+<body>
+    <div>
+        <div class="MENU_BOX">
+            <h2>빽다방 메뉴판</h2>
+            <div class="input_box">
+                <select>
+                    <option>메뉴를 고르세요</option>
+                    <option value="">앗!메리카노</option>
+                    <option value="">녹차</option>
+                    <option value="">만둣국</option>
+                </select>
+                <div class="input_box">
+                    ICED : <input type="radio" name="type"> 
+                    HOT : <input type="radio" name="type">
+                    <br>
+                    L size : <input type="radio" name="size"> 
+                    M size : <input type="radio" name="size"> 
+                </div>
+                <div class="input_box">
+                    <input type="number">
+                </div>
+                <div class="input_box">
+                    <textarea cols="40" rows="10" placeholder="기타 요청사항이 있다면 적으시오"></textarea>
+                </div>
+            
+        </div>
+    </div>
+</body>
+</html>

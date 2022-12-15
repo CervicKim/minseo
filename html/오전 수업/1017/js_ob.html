@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input_warp">
+        <input type="number" name="col" class="T_put" placeholder="행">
+        <input type="number" name="row" class="T_put" placeholder="열">
+        <input type="number" name="width" class="T_put" placeholder="너비">
+        <input type="number" name="height" class="T_put" placeholder="높이">
+
+    </div>
+    <div class="add_bt_wrap">
+        <button id="add">추가</button>
+    </div>
+    <div class="add_wrap">
+
+    </div>
+</body>
+<script>
+    //행,열,넓이,길이 입력창/ 버튼/ 그 버튼을 누르면 새 버튼들 생성./ 특정걸 안하면 입력이안되게 잠그기.
+
+    var bt_cnt = 0;
+    var bt_check=false;
+    
+    window.inload=function(){
+        var add_bt = document.querySelector('#add');
+        add_bt.addEventListener('keynp',btAdd);      // 1. readonly 2. event로 버튼 클릭시 생성을 수행할 수 았다.
+    };
+    function add_button(){
+        var add_bt = document.querySelector('#add');
+        add_bt.addEventListener('click', add_button);
+
+        var T_put = document.getElementsByClassName('T_put');
+        for(var i in T_put){
+            T_put[i].addEventListener('focus',function(){
+                if( !bt_check){              //if는 true일 때만 작용한다. keydown이나 focus로..
+                        alert('새로운 세팅버튼을 추가 생성한다.')
+                    }
+                this.value=' ';
+            }); //포커스, 피다운?으로 할지 결정. (..?)
+        }
+        function add_button(){
+            var bt = document.createElement('button');
+            bt.appendChild(document.createTextNode('세팅'+(++cnt)));
+
+            bt.addEventListener('click', value_save);
+            document.getElementsByClassName('add_wrap')[0].appendChild(bt);
+            bt_check =true;
+        }
+        function value_save(){
+            var input_label=['행','열','너비','높이'];
+            var T_put = document.getElementsByClassName('T_put');
+            for(var i in T_put){
+                if(T_put[i].value==''){
+                    alert(input_label[i] + '을 입력하시오');
+                    T_put[i].focus();
+                    return;
+                }
+            }
+        }
+        bt_check=false;
+        for(var i in T_put){
+            T_put[i].value='';
+        }
+    }
+/*객체명: tb
+    1. 행, 열, 너비, 높이 입력하고 세팅 버튼 클릭시, 
+    tb 객체에 값 저장, 
+    저장 후 tb 객체 배열에 저장
+
+    2. 저장이 완료 된 세팅 버튼을 다시 클릭 시, 해당 객체 값을 #draw에 출력하기.
+*/
+ 
+
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 400px;
+        height: 500px;
+        background-color: darkslategray;
+        margin: auto;
+        margin-top:100px;
+        }
+
+    h2{
+        text-align: center;
+        padding-top: 30px;}
+    select{
+        width: 70%;
+        height: 50px;
+        font-size: 12pt;
+    }
+    .input-box{
+        padding-left: 50px;}
+    input[type=number]{
+        width: 60%;
+        height: 25px;}
+    button {
+        width: 80%;
+        height: 35px;
+        cursor :pointer;
+        appearance: none;
+        background-color: blue;
+        color:white
+        border :none;
+        border-radius: 5px;
+    }
+    button:hover {background-color: aquamarine; 
+                color:black; 
+                font-weight: bold; 
+                transition: 0.5s;
+    }
+
+</style>
+</head>
+<body>
+<div class="box">
+    <br>
+        <h2>빽다방 메뉴</h2>
+    <br>
+        <div class="input-box">
+            <select>
+                <option value="">메뉴를 고르시오</option>
+                <option value="">앗!메리카노</option>
+                <option value="">원조커피</option>
+                <option value="">코코넛까페라떼</option>
+            </select>
+        </div>
+    <br>
+    <div class="input-box">
+        ICED : <input type="radio" name="type" value="iced" checked>
+        HOT : <input type="radio" name="type" value="hot">
+    </div>
+    <div class="input-box">
+        L size : <input type="radio" name="size" value="L" checked>
+        M size : <input type="radio" name="size" value="M">
+    </div>
+    <br>
+    <div class="input-box">
+        <input type="number" placeholder="수량을 입력하시오">
+    </div>
+    <br>
+    <div class="input-box">
+        <textarea id="memo" cols="35" rows="10" placeholder="추가 사항이 있으면 적어주세요"></textarea>
+    </div>
+    <div class="input-box">
+        <button>주문 완료</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+var set = kidshands; /*/set값을 열고*/
+        function start() {
+            set = setInterval(function () { /*버튼을 누르면 지정 초동안 변화한다. 그값을 set에 넣기.*/
+            // while (true){ /*무한 반복! (next를 무한으로 누른 것과 같다. 과부하 걸릴 수 있어서 여기선 일단 안 쓴다.)*/
+            idx++;
+            if (idx == 3){
+                idx = 1;
+            }
+            var img = document.getElementById("kidshands");
+            img.src = "../../image/" + idx + ".png";
+                                }, 1000); /*이게 초 단위! 1초단위*/
+                        }
+</script>
+<style>
+        .wrap{
+            padding: 0;
+            margin: 0 auto;
+            width: auto;
+            height: auto;
+            border: 1px red;
+            }
+
+        .kid{
+            margin-top: 80px;
+            width: auto;
+            height: auto;
+            position: relative;
+            }
+
+        .kidshands_R{position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin-left:470px;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;}
+
+        .kidshands_S{position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin-left:370px;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;}
+
+        .kidshands_P{position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin-left:400px ;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;}
+
+        .hands{
+                float: left;
+                display: flex;
+                
+                }
+
+        .hands img{max-width: 450px;}
+        
+        .start{width: 200px; height: 100px; background-color: brown;}
+
+        .hw{background-color: rgb(165, 42, 42);}
+</style>
+</head>
+<body>
+    <div class="start">
+        <button onclick="start()">시작</button>
+    </div>
+    <img src="../../image/1.png" id="kidshands" />
+    <div class="wrap">S
+        <div class="kid">
+            <img src="손내민어린이.png" alt="">
+            
+                <div class="kidshands">
+            <div class="kidshands_R">
+                <img src="3.png" alt="">
+            </div>
+            <div class="kidshands_S">
+                <img src="1.png" alt="">
+            </div>
+            <div class="kidshands_P">
+                <img src="2.png" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="hands">
+            
+            <div class="rock">
+                <button Onclick = 'rock'><img src="바위.png" alt=""></button>
+            </div>
+            <div class="scissors">
+                <button Onclick = 'scissors'><img src="가위.png" alt=""></button>
+            </div>
+            <div class="paper">
+                <button Onclick = 'paper'><img src="보.png" alt=""></button>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

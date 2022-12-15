@@ -1,0 +1,46 @@
+/*  0816_1 table test.css  */
+
+/* id가 one을 가진태그의 하위 태그인td(전체)에 style 적용*/
+#one td{
+    border:1px solid black;
+    width: 200px;
+    height: 50px;
+}
+#two td{
+    border: 3px solid red;
+    width: 200px; /* 높이는 되는데 너비는 줄마다 적용 x. 당연함.. 안그러며ㅑㄴ 표 다 섞임..*/
+    height: 80px;
+}
+#three td{
+    border: 1px solid blue;
+    height: 30px;
+}
+/*   :hover -> 해당 태그 위엔 마우스 커서가 얹혀진 상태일 때 */
+#one:hover td{
+    border: 3px solid green;
+}
+/* id가 one인 태그 위에 커서가 올라가면 해당태그의 하위 td에 style을 적용하겠다*/
+
+/* hover 뒤에 별다른 위치 지정을 안 하면? two중에서도 닿는 곳에 적용된다.*/
+#two :hover{
+    background: pink
+}
+#four td{border: 1px; solid black;
+    background-color: darkblue; 
+    color:bisque;
+    width: 100px; height: 40px;}
+
+/* 1. 각 칸에 지정할 색 이름부터 작성
+2. 각 칸에 마우스를 올릴 때 바뀔 배경색으로 변경*/
+.color_box td{width: 80px; height: 30px; 
+     border: 2px solid black;} 
+.color_box #파랑:hover{background-color: aqua;} 
+.color_box .빨강:hover{background-color: brown;}
+.color_box .녹색:hover{background-color: chartreuse;}
+.color_box .노랑:hover{background-color: darkgoldenrod;}
+.color_box #핑크:hover{background-color: darkmagenta;}
+
+table #twinkle th{width: 100px; height: 100px; 
+     border: 2px solid white;}
+table #twinkle th:hover{background-color: pink;}
+

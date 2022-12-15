@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        // var num1=10;
+        // var num2=20;
+        // var num3=0;
+
+        // num3 = num2 % num1; // %: 나누기 연산, 결과값은 나머지값!
+        // num3 = num2 > num1; // 비교 연산자, 비교연산자의 결과는 true, false
+
+        // num2 =15; num1=29;
+        // num3 = num2 >= num1; //false
+
+        // num2 = 11; num1 =12;
+        // num3 = num2 != num1; //true
+        // num3 = num2 == num1; //false
+
+        // var result;
+        // num1= 21; num2=36; num=25;
+        // result = num2 > num1 && num2> num3; //true
+        // // && 문에서 거짓은 끼기만하면 무조건 거짓!! 참은 참끼리만 있어야 참!
+
+        // result = num1 > num2 \\ num2 > num3; //true
+        // // \\(or)문에선 참이 껴있기만하면 무조건 참!! 거짓은 거짓끼리만 있어야 거짓!
+
+        // result = (num1 > 10 \\ num2 < 40) && num3 > 100 && num2 < 10; //false / 맞은 or과 틀린 비교를 && 했으니까 거짓!
+
+        // //조건 연산자 : 조건식 ? 참일 경우 내용 : 거짓일 경우 내용 ; 
+        
+        // var num1 = 20;
+        // var num2 = 24;
+
+        // var result= num1 > num2 ?//(이게 참일까요 거짓일까요? 조건식) 
+        // num1 : //(참이라면 num1이라고 출력할게)
+        // num2 ; //(거짓이라면 num2라고 출력할게)
+
+        // document.write(result); //이 식은 거짓이라서 num2인 24가 출력된다!
+
+        // var num1 = parseInt(prompt('정수 입력 1'));
+        // var num2 = parseInt(prompt('정수 입력 2'));
+
+        // var result = num1 > num2 ? '큰 수:'+num2 : '작은 수:'+num1;
+        // //조건연산자에서 참과 거짓에 해당하는 부분에 변수, 데이터(정수, 실수, 문자열), 계산식, 조건연산장, 함수 등등 포함 가능!
+        // // 단, 대입연산자는 안된다!!! 얘 빼곤 다 된다!
+
+        // document.write(result);
+        // //문제1. 바이킹 탑승조건 키: 130이상만! 탑승.
+
+        // var tall = parseInt(prompt('키를 입력하시오'));
+        
+        // var result = tall <= 130 ? '탑승가능': '탑승불가';
+        // document.write(result);
+
+        // var a = parseInt(prompt('정수 입력 1'));
+        // var b = parseInt(prompt('정수 입력 2'));
+        // var c = parseInt(prompt('정수 입력 3'));
+
+
+        // var result = a > b && a > c ? a: (b>c ?);
+        // document.write(result);
+        
+        // result = num1 > num2 && num2 > num3? num1: result;
+        // result = result > num2> 
+        // //result = num1 > num2 ? num1 : num2;
+        // //result = result > num3 ? result : num3;
+        
+        // document.write(result);
+
+        // //문 3 숫자를 압력하여 4의 배수에 해당하는 지 출력
+        // var a= parseInt(prompt('숫자를 입력하세요'));
+
+        // var result (a % 4 ==0)? '4의 배수가 맞습니다':'4의 배수가 아닙니다';
+        // document.write(result);
+
+
+        //문 4 주차장 요금 계산! 주차장 기본요금 1000원 (30분), 30분 이후부터는 10분 초과 시 100원씩 증가
+        // 2시간 이상 주차시 기본요금은 1500원으로 변경.
+        // 주차 시간을 입력하여 요금 출력, 주차시간은 분으로만 입력합니다.
+        // ex) 14분 요금 1000원/ 36분 1000원 / 58분 1200원 / 109분 1700원 / 135분 1600원/ 200분 2300원
+        var time = parseInt(prompt('주차 시간을 분 단위로 적으시오'));
+        var cost = 1000;
+        cost = time >= 120? 1500: cost; //금액이 120간 이상일 시? 1500원이된다: 아니라면기존금액그대로;
+            //주차 시간에 따른 기본 요금.
+        var ptime >= 120 ? time -120: time-30; // 주차 시간이 120이상이 되면? 시간을 120을 뺀다: 안 넘으면 30분만 뺀다; 
+            //총 주차 시간에서 기본 시간 빼고 남은 시간 계산.
+
+        var price = parseInt(ptime/10)* 100 + cost; 
+            //총 요금은 10분당 100원씩 *곱해지고, +기본요금을 더한다.
+        
+        price = time < 40? cost: price; //기본시간 이상 주차여부
+
+        document.write('주차시간 :'+ time + '분 주차요금:' + price +'원');
+
+   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

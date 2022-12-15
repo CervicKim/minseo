@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 선택한 파일 내용을 불러오는 방법.
+    window.onload = function(){ //onload는 브라우저에 출력된 이후를 불러온다는 뜻. 
+        //window.onload는 브러우저의 모든 html이 출력된 이후를 불러온다. 그래서 굳이 스크립트를 밑에다가 작성 안해도 됨!!!!!!!!!!!!!!!!!!!!!!!!!!!!ㄷㄷㄷ
+            document.getElementById("docread").addEventListener('change',readFile); //에드이벤트어쩌구는 나~중에 알려주신대.
+    }; //input 태그에 변화(change)가 생기면~ 다음을 실행한다~
+        async function readFile(e){
+            var file = e.target.files[0]; //input 태그에서 선택한 파일 객체
+            if(!file){ //파일객체 존재유무: 만약 파일이 존재하지 않는다면? 종료.
+                return;
+            }
+
+            var text = await file.text();
+            list = text.split('\n');
+            //이러면 txt파일 선택하면 내용이 팝업으로 뜬대 ㄷ;
+
+            text = text.split('\n'); // \n: 띄어쓰기로 분절해서 두 줄을 띄운다.
+            /// for(var i=0; i<text.length; i++){
+            ///     document.write(text[i]+'<br>'); //for문으로 첨부터 끝까지 식을 한번으로 압축><!
+            // }
+        }//read 파일 끝. 중괄호 닫기를 유심히 살펴보자.ㅠㅋㅋ
+            /*
+            var reader = new FileReader(); //파일을 불러오기위한 reader 객체 생성
+            reader.onload = function(e){
+                filedata = e.target.result;
+            }
+            alert(reader.readAsText(file, 'euc-kr')); //리더기를 통해 file에 담겨진 내용 가져온대..
+            //txt파일을 넣으면 내용이 뜬대... @ㅡ@?
+        }*/
+        var list =new Array(); //배열을 만들겠다.
+
+            function out_list(){//out시작
+                var out ="";
+                for(let i in list){ ////배열을 위한 for문!!!**
+                    out += list[i]+"<br>";
+
+                } //배열for문끝
+                document.querySelector('#list').innerHTML = out;
+            }//out끝
+
+        function search(){//서치시작
+            var word = document.getElementById("word");
+            var name = word.value; //검색어
+
+            for(let i in list){//서치for시작 //text정보속에서 필요한 걸 고르자.
+                //let temp =list[i].split(" "); /얘네들보다 간편한 방법?!
+                //if(temp[0] == name){
+                //=>
+                if(list[i].indexOf(name)!= -1{
+                    document.querySelector ('#list').innerHTML
+                    return; //서치함수종료.
+                }
+                    document.querySelector("#list").innerHTML = list[i];
+                    return; //함수 종류<넘깊게 궁금할 타이밍이아님.
+                }//서치함수종료
+            
+
+            document.querySelector("#list").innerHTML = "검색 결과 불일치"
+        }//서치끝
+
+
+
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<style>
+    .shr_warp{
+        display: flex;
+        margin-top: 10px;
+        border: 3px solid red;
+        width: 220px;
+    }
+    .shr_warp input{
+        border: 0;
+        outline: none;
+        width: 200px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <input type="file" id="docread" />/*<!--파일 하면 파일 입력하는 그거 뜸!!오오;;@ㅇ@-->*/
+    </div>
+    <div>
+        <input type="button" onclick="out_list()" value="전체리스트">
+        
+        <div class="shr_warp">
+        <input type="search" id="word">
+        <span onclick="search"><i class="bi bi-search"></i></span>
+        </div>
+
+    </div>
+    <div id="list"></div>
+</body>
+</html>

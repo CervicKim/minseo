@@ -1,0 +1,61 @@
+/* menu.css */
+
+
+#menu{
+        width: 1000px;
+        height: 80px;
+        position: relative;
+        }
+
+#menu ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                }
+
+#main_menu{
+            width: 1000px;
+            height: 80px;
+            position: relative;
+            }
+
+            /* > 의 역할. 이름이 중복되는 모임중에서도
+            main_menu 바로 밑의 li만!! 이라고 지정하는 거임. */
+#main_menu>li{
+                width: 200px;
+                height: 80px;
+                float: left;
+                line-height: 80px;
+                text-align: center;
+                background-color: pink;
+                position: relative;
+                }
+
+/* #main_menu .sub{
+                    width: 0;
+                    height: 0;
+                    float: left;
+                    line-height: 0;
+                    position: relative;
+                    
+                    }*/
+
+/* #main_menu .sub{ 이걸로 안보이게 만들어줄 수 있다 1.
+                opacity: 0;
+                }*/
+
+#main_menu .sub{ /*이걸로 안보이게 만들어줄 수 있다 2.*/
+                display: none;
+                -webkit-transition: all 1s ;
+                }
+
+#main_menu .sub li{
+                    -webkit-transition: height 0.5s;
+                    }
+
+#main_menu:hover .sub{ /*마우스 올리면 보이게!*/
+                        display: block;
+                        background: lightyellow;
+                        height: 320px;
+                        }

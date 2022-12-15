@@ -1,0 +1,32 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main_wrap{
+    margin: 0 auto;
+    width: 1200px;
+    height: 800px;
+}
+.rsp_wrap{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+.rsp_wrap img{
+    max-width: 200px;
+    height: 200px;
+}
+.com_wrap{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.user_wrap{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    /* text-align: center; */
+    display: flex;
+}

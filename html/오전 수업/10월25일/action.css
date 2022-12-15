@@ -1,0 +1,36 @@
+
+
+#wrap{
+    width: 100%;
+    display:flex;
+    flex-direction : column;
+    }
+
+#main-section{
+    order: 1; /*순서값. 값이 작을 수록 위가 된다! 
+                실제 html위치랑 상관없이!!*/
+    width: 100%;
+    background: #3f0d61;
+            }
+
+.page-title{
+            display: flex;
+            flex-direction: column;
+            position: relative; 
+            width: 90%;
+            padding: 5% 5%;
+            max-width: 1000px;
+            margin:0 auto;
+            color: white;
+            }
+
+
+/* 태블릿 사이즈 */
+@media all and (min-width: 780px){
+    html{font-size: 22px;}
+}
+
+/* PC (=태블릿사이즈) */
+@media all and (min-width: 960px){
+    html{font-size: 33px;}
+}

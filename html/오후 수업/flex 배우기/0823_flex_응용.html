@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1000px;
+            height: 400px;
+            background-color: #ccc;
+            margin: 120px auto;
+            display: flex;
+        }
+        .col{
+            height: 100%;
+            color: #FFF; /*폰트 색상*/
+            padding: 25px;
+            flex: 1; /* flex: 뒤의 컨테이너가 삐져나오지 않게 꽉 채워주는 역할도 함!!*/
+            position: relative;
+            transition: 0.7s; /* 천천히 펼쳐지는 효과~ 아이템에 직접 적용*/
+        }
+        .col:nth-child(1){
+            background-color: #283491;
+        }
+        .col:nth-child(2){
+            background-color: #f18684;
+        }
+        .col:nth-child(3){
+            background-color: #6ee2f1;
+        }
+        h2{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .caption{
+            width: 230px;
+            font-size:12px;
+            margin-top: 28px;
+            display: none;
+            }
+        .caption button{
+            border: 1px solid #fff;
+            border-radius: 30px;
+            outline: none;
+            padding: 8px 18px;
+            color: #fff;
+            background: transparent; /*transparent : 투명한. 배경투명화할 때~*/
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .col img{width: 200px;
+                 /*absolute는 부모태그를 기준으로 위치를 조정함. 부모에게 순종한다. 순종하는 자식.
+                 col(부모) 안의 이미지(자식)를 맘대로 할 수 있어!*/
+                 position: absolute;
+                right: 0;
+                bottom: 0;} /*덕분에 인물 이미지가 칸에 쏘옥 들어감*/
+        .col:hover .caption{display: block;} /* none은 안 보이기. block은 보이기!ㅋㅋㅋ*/
+        .col:hover{flex-grow: 2.5;} /*커지는 효과!! flex가 기본적으로 가로라서 가로로 커짐!*/
+        .col:hover h2{ text-align: left;} /*마우스를 갖다 댈 시에 글자들 왼편으로 정렬*/
+    /* scc는 순서 상관없어서 막 뒤집어도 된다! */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h2>크로스핏</h2>
+            <div class="caption">
+                <p>크로스핏은 정신과 체력싸움이다.</p>
+                <button>Know More</button>
+            </div>
+            <img src="img1.png">
+        </div>
+        <div class="col">
+            <h2>웨이트</h2>
+            <div class="caption">
+                <p>웨이트는 누구나 쉽게 접근할 수 있다.</p>
+                <button>Know More</button>
+            </div>
+            <img src="img2.png">
+        </div>
+        <div class="col">
+            <h2>요가</h2>
+            <div class="caption">
+                <p>요가는 정신력과 유연성을 향상 시켜준다.</p>
+                <button>Know More</button>
+            </div>
+            <img src="img3.png">
+        </div>
+        
+    </div>
+    
+</body>
+</html>

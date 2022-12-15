@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s; 
+    font-family: 'Open Sans';
+    background-color: rgb(126, 9, 9);
+}
+/*바디 패딩마진! 제일 기본!! 뭐든 css 시작에 깔아야하는 베이스다!!!*/
+
+.container {
+    position: relative;
+        height: auto;
+}
+.movie-list{
+    padding: 20px;
+    background-color: rgb(44, 0, 0);
+}
+
+.site-title {
+    text-align: center;
+    font-size: 38px;
+    color: #e50914;
+    font-weight: 400;
+}
+
+.movie-row {
+        display: flex;
+        justify-content: space-between; /*사이간격을 일정하게*/
+        margin-bottom: 50px;
+}
+
+.series-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    flex-basis: 17%; /* 전체가 100%에서 
+    우리가 담아야할 포스터는 총 5개니까 5로 나누셈
+    그러면 20씩! 그리고 여백이 어느정돈 있어야하니까 17%인거임!
+    그냥 막 쓴 게 아니라니... 넘 신기히다 8ㅇ8/// */
+    cursor: pointer;
+}
+.poster {
+    width: 100px;
+    height: auto;
+}
+
+.title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 22px;
+    color: white;
+}
+.year{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+/* 영화 상세정보 css */
+.movie-section{
+    z-index: 1; /*겹쳐지는 애들을 위아래 구분을 해준다. z축으로 한단계 나왓!*/
+    position: absolute;
+    visibility: hidden;
+    background-color: black;
+    top: 100;
+    display: flex;
+    width: auto;
+    margin: 100px auto;
+    justify-content: space-between;
+    padding: 40px 0;
+    color: rgb(255, 0, 128);
+    font-weight: 400;
+    border: 1px solid rgb(236, 225, 225);
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+.back{
+    flex-basis: 10%;
+}
+.section-left{
+    flex-basis: 55%;
+}
+.section-right{
+    flex-basis: 25%;
+}
+.back a {
+    text-decoration: none;
+    color: red;
+    font-size:22px;
+    font-weight: 600;
+}
+.movie-title{
+    font-size: 40px;
+    color: white;
+}
+.movie-rating{
+    padding-left: 5px;
+    margin-top: 20px;
+    color: #79b8f3;
+    display: flex;
+}
+.movie-rating span{
+    margin-right: 20px;
+}
+.movie-plot{
+    margin-top: 20px;
+    line-height:2rem;
+}
+.movie-info > div span:first-child{
+    padding: 10px 0;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    display: inline-block;
+}
+.movie-info > div span{
+    color : #79b8f3;
+}
+.fa-star{
+    color:#ffd900;
+}
+.fa-thumbs-up{
+    color: #0084ff
+}
+.fa-film {
+    color: rgb(96, 118, 119);
+}
+.fa-calendar{
+    color: rgb(255, 0, 179);
+}
+.section-right{
+    margin-left: 30px;
+}

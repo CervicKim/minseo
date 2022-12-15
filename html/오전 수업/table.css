@@ -1,0 +1,19 @@
+ /* table.css */
+p{
+    .animal img{
+        width: 195px;
+        height: auto;v
+    }
+    font-size:20pt;
+    font-weight:700;
+    text-shadow: 5px 5px 5px gray;}
+    /* text shadow: x,t,z축으로 이동. ***컴퓨터는 마이너스 이동이 없다. 최초의 위치는 모니터 맨 왼쪽 위. */
+hr{
+    width: 635;
+    margin-left: 0;
+}
+
+ table tr td{
+    border:1px solid black; 
+    width:200px; 
+    height:300px;}

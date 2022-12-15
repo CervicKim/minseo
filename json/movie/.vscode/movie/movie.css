@@ -1,0 +1,37 @@
+body {
+    margin : 0;
+    padding: 0;
+    box-sizing : border-box;
+    transition: 0.3; /*이걸 깔면 창 크기 조절할때 부드러워진다.. 큰 사이트에는 렉걸리니 작은 곳에서만 추천*/
+}
+
+.container{
+        width: 100%;
+        height: auto;
+        background-color: cadetblue;
+        margin: 50px auto;
+}
+.title{
+        text-align: center;
+        font-size:42px auto;
+}
+
+.movie-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.series-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    flex-basis: 17%;
+}
+
+.poster{
+        width: 100px;
+        height : auto;
+}

@@ -1,0 +1,27 @@
+
+#wrap{
+    width: 90%;
+    margin: 0 auto;
+}
+.box{
+    display: inline-block;
+    height: 100px;
+    width : 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.box1{background: red;}
+.box2{background: orange;}
+.box3{background: yellow;}
+.box4{background: green;}
+.box5{background: blue;}
+
+@media all and(min-width: 1024px;){
+    .box{width: 20%;}
+    .box{width: 100%}
+}
+/*최소 1024px 이니까~ 미만이 아니고 그 이상!입니다.*/
+@media all and(min-width: 1024px;){
+    .box{width : 20%;}
+}

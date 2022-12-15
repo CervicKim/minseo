@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div class="input-box">
+        <input type="text" value="안녕">
+        <input type="text" value="디지몬">
+        <input type="text" value="네 꿈을">
+        <input type="text" value="꾸면서">
+        <input type="text" value="잠이 들래">
+        <input type="text" value="안녕 디지몬">
+        <input type="text" value="친구들">
+        <input type="text" value="">
+        <input type="text" value="">
+        <input type="text" value="">
+    </div>
+    <button onclick="check()">확인</button>
+    
+</body>
+<script>
+    function check(){
+        //children : 부모(box) 기준에서 자식태그(칠드런)를 가져옴
+        
+        //console.log(x[0]); //첫번째 input을 가져옴. 첫번째여도 미국기준이라 0살부터 시작해서 0이 1번째임...ㄱ-
+        // 세번째 input을 출력해봐요~!
+        var x = document.getElementById('box').children;
+        //console.log(x[2]);
+        for(var i=0; i< x.length; i++){ //for시작
+            var inputValue = x[i];
+            console.log(inputValue);
+            if(inputValue.value == ''){
+                alert('입력해주세요');
+                inputValue.focus(); //그쪽으로 커서 이동
+                return false;
+            }
+        } //for끝
+    }
+
+
+// i가 3이면 "i는 3입니다."를 console.log 출력
+    for (var i=0; i<5; i++){
+    if(i == 3){
+        console.log('i는 '+3+'입니다.');
+    }console.log(i);
+    }
+
+     //엥;이거 안되네? 집가서 ㅠㅠ 고쳐보기
+</script>
+</html>

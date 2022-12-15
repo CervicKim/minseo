@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input id="name" type="text">
+    <button onclick="doClick()">클릭하시오</button>
+    <!-- script가 아래로 가는 이유는? 위에서 아래로 읽어내려갈 때 html부터 실행~ 스크립트로 시작해야 빠르기 때문. 
+        옛날엔 그 차이가 더 컸었다! -->
+
+        <h2>메뉴 선택</h2>
+        <select id="menu">
+            <option value="null">메뉴를 선택하시오</option>
+            <option value="아아">아이스 아메리카노</option>
+            <option value="라떼">카페라떼</option>
+            <option value="모카">카페모카</option>
+        </select>
+        <input id="count" type="number" placeholder="수량입력...">
+        
+        ICED : <input type="radio" name="type" value="ice" checked> <!--체크드: 선택 사항중 이미 선택이 되어있는 거!-->
+        HOT : <input type="radio" name="type" value="hot"> 
+        <!-- 아이스 핫 둘 중하나 선택하는 버튼 생성하기. -그다음- -->
+        <button onclick="doOrder()">주문하기</button>
+
+
+
+
+    <script> 
+    var x = 10; /* 오른쪽에서 왼쪽으로 대입한다! */
+    // var란? 데이터타입을 의미한다.
+    if(x == 10){
+        console.log('x는 10입니다!');}
+
+    if(x > 5){console.log('if 실행');}
+
+    var word = '컵라면';
+    if(word == '컵라면'){console.log('오늘은 컵라면을 먹었어요.');}
+
+    var word2 = '김밥';
+    // 문제) if로 김밥을 비교해서 맞으면 "오늘 김밥 먹었어요" 출력하기.
+    if(word2 == '김밥'){
+        console.log("오늘은 김밥 먹었어요.");
+    }
+    else{
+        console.log("오늘 돈가스를 먹었어요.");
+    }
+
+
+    function doClick(){
+        // document : html
+        // get : 얻다
+        // Element : html 태그
+        // ById : ~id로
+        // value : input 값
+        var name = document.getElementById('name').value;
+        console.log(name);
+        if(name == '김밥'){ //if 시작
+            console.log('오늘 김밥 먹었어요')
+        } //fi 끝
+
+        
+
+    } //함수 끝.
+function doOrder(){
+    var selectedMenu = document.getElementById('menu').value;
+    console.log(selectedMenu);
+    // 선택한 메뉴를 html 메뉴에서 id를 얻어 input값을 내다.
+    
+    //문제 1. 아아 선택시, "죄송합니다 아아는 품절입니다"출력하기.
+        //문제 2. 메뉴를 선택하지 안혹 주문시 "메뉴를 선택해주세요" 출력하기
+        // 힌트! 오늘 배운 if 사용해서 풀 것.
+    if(selectedMenu == '아아'){
+        console.log('죄송합니다 아아는 품절입니다.');
+    }
+    if(selectedMenu == 'null'){
+        console.log('메뉴를 선택하세요~');
+    }
+    var count = document.getElementById('count').value;
+    console.log(count+'잔');
+    // 문제3. 수량 10개 넘게 입력시 
+    //  "죄송합니다 인당 10잔까지 주문 가능합니다." 출력
+    if(count > 10){
+        console.log("죄송합니다 1인당 10잔까지 주문 가능합니다.");
+    }
+    var type = document.querySelector('input[name=type]:checked').value;
+console.log(type);
+// -이어서- 아이스선택인지 핫 선택인지 뜨게 만드는 함수.
+    }
+        
+
+    </script>
+</body>
+</html>

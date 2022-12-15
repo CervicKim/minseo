@@ -1,0 +1,15 @@
+이클립스로 자바하기. 스탭!
+step 1. 프로젝트 생성 (file - new -java project- 폴더 Don't create)
+step 2. 패키지 생성 (생략 가능) (방금 만든 프로젝트 우클릭 - new - package (소포모양))
+step 3. 클래스 생성 (패키지 우클- new - class(초록C공) - 이름정하고 - public static void... 선택- 생성)
+
+
+
+최종값: 5
+
+
+ syso 쓰고
+컨트롤 스페이스
+
+저장하고
+컨트롤 +f11

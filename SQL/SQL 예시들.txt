@@ -1,0 +1,103 @@
+<<<<<<< HEAD
+-- <= SQL에서의 주석. 
+-- 사원 이름 조회
+-- 조회 : SELECT 
+-- 테이블 선택: from
+SELECT ename FROM emp 
+-- 사원번호, 사원이름, 입사 날짜 조회
+SELECT empno, ename, hiredate FROM emp
+-- 사원번호, 사수번호, 사원이름, 급여조회
+SELECT empno, mgr, ename, sal FROM emp
+SELECT empno AS "사원번호" FROM emp
+-- 사원번호, 사원이름 동시 조회!
+SELECT ename AS "사원이름", empno AS "사원번호" 
+FROM emp 
+
+-- 필터링 : where : 원하는 정보를 여과하다!
+-- 세일즈맨이 직업인 사람들의 이름과 사원번호만 출력!
+SELECT empno, ename, job FROM emp WHERE job = "salesman"
+-- 사원번호가 7782인 사원의 번호, 이름, 직업 조회
+SELECT empno, ename, job FROM emp 
+WHERE empno =7782
+-- 급여를 1000 이상 받는 사원 이름 조회.
+SELECT ename, sal FROM emp WHERE sal >= 1000
+-- 급여 2000 이상 받는 사원이름, 직업, 급여 조회
+SELECT ename, job, sal FROM emp WHERE sal >= 2000
+-- SQL 실행 순서:
+-- 1. from  2. where  3. select
+-- job이 manager이고 급여가 2000 이상인 사원이름 조회
+-- AND는 모든 조건이 만족해야 한다.
+SELECT ename FROM emp 
+WHERE job ='manager' AND sal >= 2000
+-- 입사날짜가 1981-12-03이고, 직업이 analyst인 사원이름, 입사날짜, 직업 조회
+SELECT ename, hiredate, job FROM emp
+WHERE hiredate = "1981-12-03" AND job = "analyst"
+-- 1981-09-08 이후 입사한 사원 이름, 입사날짜 조회
+SELECT ename, hiredate FROM emp
+WHERE hiredate >= '1981-09-08'
+
+-- 사원 급여 총합 구하기. SUM : 총합 (함수)
+SELECT sum(sal) FROM emp
+-- 직업이 manager인 사원 급여 총합 조회
+SELECT sum(sal) FROM emp 
+WHERE job = 'manager'
+-- AVG : 평균 / MAX : 최대값 / MIN : 최솟값 (함수)
+-- 부서번호가 20번인 사원의 급여 평균을 조회하시오.
+SELECT avg(sal) FROM emp
+WHERE deptno = 20
+-- 날짜 함수: 1. 입사 날짜 년도만 나오게 1900 / 뒤의 숫자 두 자리만 나오는건 %y 99)
+SELECT date_format(hiredate,'%Y') FROM emp
+-- 날짜 함수: 2. 입사 날짜 월만 나오게 / 풀네임 영어는 %M (February), 숫자만 %m(2))
+SELECT date_format(hiredate,'%M') AS '월' FROM emp
+=======
+-- <= SQN에서의 주석. 
+-- 사원 이름 조회
+-- 조회 : SELECT 
+-- 테이블 선택: from
+SELECT ename FROM emp 
+-- 사원번호, 사원이름, 입사 날짜 조회
+SELECT empno, ename, hiredate FROM emp
+-- 사원번호, 사수번호, 사원이름, 급여조회
+SELECT empno, mgr, ename, sal FROM emp
+SELECT empno AS "사원번호" FROM emp
+-- 사원번호, 사원이름 동시 조회!
+SELECT ename AS "사원이름", empno AS "사원번호" 
+FROM emp 
+
+-- 필터링 : where : 원하는 정보를 여과하다!
+-- 세일즈맨이 직업인 사람들의 이름과 사원번호만 출력!
+SELECT empno, ename, job FROM emp WHERE job = "salesman"
+-- 사원번호가 7782인 사원의 번호, 이름, 직업 조회
+SELECT empno, ename, job FROM emp 
+WHERE empno =7782
+-- 급여를 1000 이상 받는 사원 이름 조회.
+SELECT ename, sal FROM emp WHERE sal >= 1000
+-- 급여 2000 이상 받는 사원이름, 직업, 급여 조회
+SELECT ename, job, sal FROM emp WHERE sal >= 2000
+-- SQL 실행 순서:
+-- 1. from  2. where  3. select
+-- job이 manager이고 급여가 2000 이상인 사원이름 조회
+-- AND는 모든 조건이 만족해야 한다.
+SELECT ename FROM emp 
+WHERE job ='manager' AND sal >= 2000
+-- 입사날짜가 1981-12-03이고, 직업이 analyst인 사원이름, 입사날짜, 직업 조회
+SELECT ename, hiredate, job FROM emp
+WHERE hiredate = "1981-12-03" AND job = "analyst"
+-- 1981-09-08 이후 입사한 사원 이름, 입사날짜 조회
+SELECT ename, hiredate FROM emp
+WHERE hiredate >= '1981-09-08'
+
+-- 사원 급여 총합 구하기. SUM : 총합 (함수)
+SELECT sum(sal) FROM emp
+-- 직업이 manager인 사원 급여 총합 조회
+SELECT sum(sal) FROM emp 
+WHERE job = 'manager'
+-- AVG : 평균 / MAX : 최대값 / MIN : 최솟값 (함수)
+-- 부서번호가 20번인 사원의 급여 평균을 조회하시오.
+SELECT avg(sal) FROM emp
+WHERE deptno = 20
+-- 날짜 함수: 1. 입사 날짜 년도만 나오게 1900 / 뒤의 숫자 두 자리만 나오는건 %y 99)
+SELECT date_format(hiredate,'%Y') FROM emp
+-- 날짜 함수: 2. 입사 날짜 월만 나오게 / 풀네임 영어는 %M (February), 숫자만 %m(2))
+SELECT date_format(hiredate,'%M') AS '월' FROM emp
+>>>>>>> dd7ca453b0b503bc7a29e3664e1ff69558bda597

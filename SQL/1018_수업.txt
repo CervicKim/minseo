@@ -1,0 +1,21 @@
+DELETE FROM emp WHERE empno = 7902;
+-- 부서번호 30을 지워라!
+DELETE FROM dept WHERE deptno = 30; -- 자식과 부모로 관계된 정보는 함부로 지울 수 없다!!
+-- emp이랑 연관되어잇는 정보를 지우면 관계가 무너김!
+-- 부서 추가!
+INSERT INTO dept (deptno, dname, loc) values(60, '디자인팀', '계룡')
+-- 부서번호 60을 지워라!
+DELETE FROM dept WHERE deptno = 60;
+-- 자식테이블(emp)에서 부모테이블(dept)의 PK(deptno)를 쓰고 있다면 ~ 부모테이블의 PK(deptno)==(자식의FK)는 지울 수 없다!!
+
+-- 이미 관계 되어있는 요소들을 지우고 싶을 땐 어떡하나?!
+-- ※ON DELETE CASCADE : 부모테이블에 있는 데이터를 지우면, 자식테이블의 데이터도 함께 삭제!!※ << 자식테이블에 만들어야!!!!!!!
+-- ※ON DELETE SET NULL : 부모테이블에 있는 데이터를 지우면, 자식테이블 데이터가 NULL이 된다!!※ <-자주들 쓰임.
+-- ON DELETE NO ACTION : 부모테이블에 있는 데이터를 지워도, 자식테이블에 데이터가 남아 있음!!
+-- ON DELETE SET DEFAULT : 부모테이블에 있는 데이터를 지우면, 자식테이블 데이터 값이 default로 바뀐다!
+-- ***(기본값이다!)
+-- ON DELETE RESTRICT : 자식테이블에서 부모테이블을 사용하고 있으면 삭제 불가능!!  
+
+DELETE FROM brand WHERE brand_id = 3;
+-- 문제: brand 테이블의 나이키 delete!
+DELETE FROM brand 

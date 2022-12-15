@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // if(window.HTMLCanvasElement)      
+    //     alert('캔버스 지원 가능!!');
+</script>
+<body>
+    <canvas id="canvas" width="2000" height="900"></canvas>
+</body>
+</html>
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // 집 네모
+    ctx.fillStyle= 'rgb(242,150,97)';
+    ctx.fillRect(230,300,540,300);
+
+    //집 굴뚝
+    ctx.fillStyle= 'rgb(102,37,0)';
+    ctx.fillRect(280,180,90,120);
+
+
+    // 집 지붕
+    ctx.fillStyle= 'rgb(47,157,39)';
+    ctx.moveTo(500, 190);
+    ctx.lineTo(800, 300);
+    ctx.lineTo(200, 300);
+    ctx.lineTo(500, 190);
+    ctx.fill();
+
+    // 동그라미 굴뚝 연기 1 첫째
+    ctx.beginPath();
+    ctx.arc(290,120,35,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle='rgb(74,194,211)';
+    ctx.fill();
+    
+    // 동그라미 굴뚝 연기 2 둘째
+    ctx.beginPath();
+    ctx.arc(220,90,25,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle='rgb(74,194,211)';
+    ctx.fill();
+
+    // 동그라미 굴뚝 연기 3 셋째
+    ctx.beginPath();
+    ctx.arc(170,70,15,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle='rgb(74,194,211)';
+    ctx.fill();
+
+</script>
+    

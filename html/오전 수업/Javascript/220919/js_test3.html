@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        img{
+            max-width: 600px;
+            }
+    </style>
+    <script>
+        var idx = 1;
+
+        function next(){ //next를 누르면 idx라는 함수가 1씩 증가. == 2, 3, 4번 jpg로 간다는 뜻!
+            idx++;
+            if (idx == 6){ //늘고 늘어서 idx가 준비된 이미지보다 많이 보여지면 다시 1로 돌아간다. 끝나면 처음거 다시보여준다.
+                idx = 1;
+            }
+            var img = document.getElementById("mimg"); //mimg은 그냥 id 이름일 뿐임!
+            img.src = "../../image/" + idx + ".jpg"; // 본 경로 폴더의~ .jpg확장자파일의~ 이름이 1씩 늘어나는 함수를 넣는다!!
+        }
+
+        function pre(){
+            idx--;
+            if (idx == 0){ //***만일 2번 상태에서 pre버튼을 눌러도 그러면 0이 아니라 1이 되니까 걍 1번을 보여주는거임(뒷이미지를 보여준다는 뜻!!)
+                idx = 5; //1번 전으로 넘어가서 0번이 되면 5번을 보여준다(끝부터 다시.)
+            }
+            var img = document.getElementById("mimg"); 
+            img.src = "../../image/" + idx + ".jpg";// 본 경로 폴더의~ .jpg확장자파일의~ 이름이 1씩 줄어드는 함수를 넣는다!!
+                        }
+
+
+
+            var set = " "; //set값을 열고
+        function start() {
+            set = setInterval(function () { // 버튼을 누르면 지정 초동안 변화한다. 그값을 set에 넣기.
+            // while (true){ //무한 반복! (next를 무한으로 누른 것과 같다. 과부하 걸릴 수 있어서 여기선 일단 안 쓴다.)
+            idx++;
+            if (idx == 5){
+                idx = 1;
+            }
+            var img = document.getElementById("mimg");
+            img.src = "../../image/" + idx + ".jpg";
+                                }, 1000); //이게 초 단위! 1초단위
+                        }
+
+        function end(){
+            clearInterval(set); //반복하는 값을 넣고 끝내는 함수 생성 후 버튼에 담김.
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <img src="../../image/1.jpg" id="mimg" /> <!-- ..들 까지는 같은 경로라는 뜻. image라는 폴더에서/ 2.jpg 파일을 연결했단뜻.-->
+    <div>
+        <button onclick="start()">시작</button>
+        <button onclick="end()">종료</button>
+        <button onclick="pre()">이전</button> <!--버튼들.-->
+        <button onclick="next()">다음</button>
+    </div>
+
+</body>
+</html>

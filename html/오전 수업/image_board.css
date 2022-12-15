@@ -1,0 +1,112 @@
+/* image_board.css */
+
+/* 갤러리 외곽 스타일 만들기 */
+#image_mask{
+            width: 100%;
+            height: auto;
+            margin-top: 80px;
+            }
+
+#image_wrap{
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+            }
+
+/* 갤러리 글씨 스타일 */
+.image_title{
+            width: 100%;
+            height: 50px;
+            }
+
+.title_wrap{
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin: 0 auto;
+            border-bottom: 1px solid rgb(220,220,220);
+            }
+
+.title_wrap b{
+            font-size: 30px;
+            border-bottom: 3px solid black;
+            /* 보더 버텀으로 밑줄을 그으면 더 자연스럽고 이쁘다. */
+}
+
+/* 갤러리 이미지 배치 */
+.image_list{
+            width: 1200px;
+            height: 720px;
+            margin-top: 30px
+}
+.line_wrap{
+            display: flex;
+            width: 1200px;
+            height: 350px;
+
+}
+
+.cell{
+            max-width: 380px;
+            max-height: 350px;
+}
+
+/* 이미지 각 영역 스타일 */
+.cell_one{
+            padding-right: 20px;
+        }
+.cell_two{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+.cell_three{
+            padding-left: 20px;
+        }
+.cell{max-width: 350px;
+    max-height: 295px;}
+
+.image_area{
+            width: 100%;
+            height: 295px;}
+
+/* .img_area{ 1. 그냥 img_ src="이미지이름" / 
+            2. 사이즈 주고 백그라운드에
+            width: 100%;
+            height: 295px;
+            background: url(봄날은간다.jpg) no-repeat center center;*/
+/* 배경화면에 이미지 넣기. // no-repeat안하면 자꾸 중복됨 ㄷㄷ // center 
+            background-size: cover; <- 원하는 사이즈에 맞춰 이미지를 확대나 축소해줌}*/
+
+.title{
+            width: 380px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-top: 5px;
+            font-weight: 800;}
+
+A{
+            color: black;
+            text-decoration: none;
+        } /*a에다가 자동으로 생기는 파랑에 밑줄을 없애는 거임*/
+
+.image_area a{
+            display: block;
+            width: 380px;
+            height: 295px;
+        } /*이미지에 커서 갖다 대면 손가락 모양으로 바뀜.*/
+
+.title a:hover{
+            color: blue;
+            text-decoration: underline;
+        } /*자동으로 생기는 링크의 퍼렁밑줄 효과는 지웠고, 그걸 마우스 갖다 댈 때 다시 뜨도록 효과를 줬다*/
+
+        /*image_area에다가 이걸 주면 갖다 댈 때 약간 축소됨 transform: scale(0.9);*/
+
+.image_area:hover ~ .title>a{ /* ~ : 이미지 에리아랑~ 타이틀까지 형제로 묶어서! 효과를 한꺼번에 준다.
+    커서를 이미지에 놔도, 타이틀에 놔도 아래 효과(블루밑줄)이 같이 나타난다!*/
+        
+            color: blue;
+            text-decoration: underline;
+        }

@@ -1,0 +1,70 @@
+-- =================== 10/17
+
+-- insert, select, update, delete : DML
+-- create(테이블 생성), drop (테이블 삭제), alter (테이블 수정) : DDL
+
+-- 상품테이블 만들기 -- <- 만들 테이블이름 / 오토_인크리먼트: 자동증가// 다 쓰고 실행
+CREATE TABLE products( 
+	product_id int(4) AUTO_INCREMENT PRIMARY KEY, 
+	product_price int(4) comment '물품가',
+	create_at datetime comment '입고 날짜',
+	shipment_price int(4) comment '출하가',
+	a_brand_name varchar(30) comment 'A 브랜드 이름',
+	b_brand_name varchar(30) comment 'B 브랜드 이름',
+	c_brand_name varchar(30) comment 'C 브랜드 이름'
+	);
+	
+-- 상품테이블에 데이터 넣기. 
+INSERT INTO products (product_price, create_at, shipment_price, a_brand_name)
+VALUES (3000, now(), 5000, '나이키 에어포스')
+
+INSERT INTO products (product_price, create_at, shipment_price, b_brand_name)
+VALUES (3000, now(), 5000, '아디다스')
+
+INSERT INTO products (product_price, create_at, shipment_price, a_brand_name, b_brand_name, c_brand_name)
+VALUES (3000, now(), 5000, '나이키','아디다스','코닥')
+
+-- 테이블 삭제 (안의 데이터도 모두 사라짐!!)
+DROP TABLE products
+
+CREATE TABLE brand( 
+	brand_id int(4) AUTO_INCREMENT PRIMARY KEY,
+	brand_name varchar(30) comment '브랜드 이름'
+);
+-- 상품 테이블 다시 만들기
+CREATE TABLE products(
+	product_id int(4) AUTO_INCREMENT PRIMARY KEY, 
+	product_price int(4) comment '물품가',
+	create_at datetime comment '입고 날짜',
+	shipment_price int(4) comment '출하가',
+	brand_id int(4) comment '브랜드 번호',
+	FOREIGN KEY (brand_id) REFERENCES brand(brand_id) ON DELETE CASCADE 
+	);
+	
+INSERT INTO brand (brand_name) values('나이키')
+INSERT INTO brand (brand_name) values('아디다스')
+INSERT INTO brand (brand_name) values('코닥')
+INSERT INTO brand (brand_name) values('톰브라운')
+INSERT INTO brand (brand_name) values('버버리')
+
+INSERT INTO products (product_price, create_at, shipment_price, brand_id)
+values(5000, now(), 3000, 1)
+INSERT INTO products (product_price, create_at, shipment_price, brand_id)
+values(4000, now(), 4000, 2)
+INSERT INTO products (product_price, create_at, shipment_price, brand_id)
+values(3000, now(), 5000, 3)
+INSERT INTO products (product_price, create_at, shipment_price, brand_id)
+values(2000, now(), 6000, 4)
+INSERT INTO products (product_price, create_at, shipment_price, brand_id)
+values(1000, now(), 7000, 5)
+
+-- 문제: 상품 물품가, 출하가, 입고날짜, 브랜드명을 조회하고 입고날짜를 내림차순 하시오.
+-- 테이블을 products 와 brand 두 가지를 만들었고, 두 항목의 것들을 동시에 조회하니까 inner join!!! 하고
+-- 입고 날짜를 기준으로 내림차순 하시오 
+
+SELECT product_price AS '상품 물품가',
+		shipment_price AS '출하가', 
+		create_at AS '입고 날짜',
+		brand_name AS '브랜드명'
+FROM products AS p INNER JOIN brand AS b
+ORDER BY create_at desc

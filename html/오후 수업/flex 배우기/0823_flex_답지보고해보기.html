@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0;
+             padding: 0;
+             box-sizing: border-box;}
+
+        .row{
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            display: flex;} 
+        
+        .item{flex: 1;} /* flex: 뒤의 컨테이너가 삐져나오지 않게 꽉 채워주는 역할도 함!!*/
+
+        .item:nth-child(1){background-color: red;}
+        .item:nth-child(2){background-color: blue;}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="row">
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+</body>
+</html>

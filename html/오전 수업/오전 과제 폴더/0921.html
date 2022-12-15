@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .black{ /*큰 판떼기 하나, 세부 판떼기를 색상으로 만들어 구역을 나누고나서 진행한다.*/
+        float: left;
+        margin: 30px 100px 0 200px;
+        padding: 20px; /*padding & margin : 10px -> 동서남북 일괄적용하겠다는 뜻
+                        padding & margin : 10px(위, 아래) 10px(좌,우)
+                        padding & margin : 10px(위) 10px(오른쪽, 왼쪽) 10px (아래)
+                        padding & margin : 10px 위 10px 오른쪽 10px 아래 10px 왼쪽 // 외우면 좋다!
+                                padding-top <=이래도 되는디 효율이 떨어짐!ㅠㅠ
+                                
+                        margin은 auto가 있지만! padding은 auto가 없다!!!!! 무조건 값입력해야!!!!!!*/ 
+        width: 300px;
+        height: 600px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        opacity: 1;
+        
+        }
+
+    .black_2{
+        float: left;
+        margin: 30px 100px 0 100px;
+        padding: 20px;
+        width: 300px;
+        height: 600px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        opacity: 1;
+        }
+
+    .black_3{
+        float: left; /*네모들을 가로로 놓을때. 직접 박스들에게 적용하지말고! 그들을감싸는 div를 만들어서 거따가 해야!*/
+        margin: 30px 100px 0 100px;
+        padding: 20px;
+        width: 300px;
+        height: 600px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        opacity: 1;
+        }
+        
+    .name{
+        text-align: center;
+        margin-top: 100px;
+        }
+    
+    h3{
+        text-align: center;
+        font-size: 25px;
+        font-weight: 100;
+    }
+
+    button{
+        text-align: center; /*기본적으로 있는 배ㅣ경색을 지워야함. background: transparent;*/
+        color: white;
+        width: 100px;
+        height: 60px;
+        background: none;
+        border : 1px solid red;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    button :hover{
+        background-color: red; 
+    }
+</style>
+<body>
+
+<div class= name><h1>choose your plan</h1>
+
+    <div class = black>
+        <h3>Starter</h3>
+        <h1>19$</h1><span>/month</span>
+        <ul>
+            <li>1 Website</li>
+            <li>10 GB Disk Space</li>
+            <li>Free Email Address</li>
+            <li>Basic Web builder</li>
+            <li>No SSL cerificate</li>
+            <li>Limited Support</li>
+        </ul>
+        <br>
+        <button>Add to Cart</button>
+    </div>
+
+    </div>
+    <div class = black_2>
+        <h3>Starter</h3>
+        <h1>19$</h1><span>/month</span>
+        <ul>
+            <li>1 Website</li>
+            <li>10 GB Disk Space</li>
+            <li>Free Email Address</li>
+            <li>Basic Web builder</li>
+            <li>No SSL cerificate</li>
+            <li>Limited Support</li>
+        </ul>
+        <br>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class = black_3>
+        <h3>Starter</h3>
+        <h1>19$</h1><span>/month</span><!--span에 역할이 있는 건 아니고 걍 태그 이름임. 폰트 사이즈를 직접줄여야한다.-->
+        <ul><!--item h1{font-size : 30px}
+                item span{font-size : 12px}-->
+            <li>1 Website</li>
+            <li>10 GB Disk Space</li>
+            <li>Free Email Address</li>
+            <li>Basic Web builder</li>
+            <li>No SSL cerificate</li>
+            <li>Limited Support</li>
+        </ul>
+        <br>
+        <button>Add to Cart</button>
+    </div>
+
+</body>
+</html>

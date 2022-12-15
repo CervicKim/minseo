@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <input type="text" placeholder="이름입력">
+            <input type="text" placeholder="연락처입력">
+            <input type="text" placeholder="이메일입력">
+            <input type="text" placeholder="주소입력">
+            <input type="text" placeholder="기타사항입력">
+        </div>
+        <button onclick="submit()">제출</button>
+    </div>
+
+    
+</body>
+<script>
+    //문제. 제출 버튼을 눌렀을 때 input에 모두 입력이 되어있어야 한다.
+    //값을 입력하지 않고 누르면 "값을 입력해주세요" 알람창 보여주기+포커스
+    //var x = document.getElementById("container")
+    //for (var i=0; i<4; i++){
+    //if(i == 0){
+        //alert("값을 입력해주세요");
+        //inputValue.focus();
+        //;
+    //    }   
+    //}// 나의 틀린 값.... 갠짜나 이해 못해도 어차피 나중에 알게되니까 어 좀 공부 찾아보고 복붙해서 끌어다쓰고 그러면된대.화이팅.
+    
+
+
+    function submit(){
+        var box = document.getElementById('box').children;
+        for(var i=0; i<box.length; i++){
+            var inputValue = box[i];
+            if(inputValue.value == ''){
+                alert('빈칸 없이 값을 입력하시오');
+                inputValue.focus();
+                return false;
+            }
+        }
+    }//왜 똑같이 따라써도 안 되지 ㅋㅋ ^ㅡㅜ
+</script>
+</html>

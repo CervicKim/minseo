@@ -1,0 +1,21 @@
+"Rating"
+"Votes"
+"Runtime"
+"Year"
+"Director"
+"movie-plot"
+"stars"
+"generes"
+"languages"
+"awards"
+"poster-img"
+
+1 클릭시 정보 뜰 수 있게 경로 만들고
+그걸 콘테이너에 집어넣는다.
+
+2 이 친구들 하나하나 append해서 정보 뜨게 하고
+3 정보 겹치지 않게 empty도 윗쪽에 하나하나 걸어주자.
+
+4 클릭시 뒷배경이 불투명하게 날아가도록 하면 집중이 더 잘되겠죠!
+클릭시 뒤에 불투명.
+다시클릭해서없어지면 배경이다시잘보여져야겟죠!

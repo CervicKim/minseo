@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function new_window(){//객체와 아이들 참고해서 오픈 함수 만들기.
+        //     window.open('child.html','',width=700, hieght=500'); //네이버 != 네이버1 :네이버 윈도우랑 이름이 달라서 창 2개 뜸.
+        //     // 1.새 창 주소, 2. (아무것도 안 쓰면(=blank)) / 이름을 지정해도 눈에 띄진 않는다 
+        //     //window이름이 동일하면 새 창 하나만 뜸. 이름이 다르면 또 다른 창을 하나 더 켜준다!@ㅇ@??!,
+        //     //3. 윈도우 크기
+        function new_window(){
+            //alert(screen.height); //보통 1920x >1080<인 걸 알려준다
+            var Mwidth = screen.width;
+            var Mheight = sdreen.height;
+
+            var width= '';
+            var left = Mwidth/2 - width/2;
+            var top = Mheight/2 - height/2;
+            var url = 'child.html';
+            var win_name= ' ';
+            var option = 'width='+width+',height='+height+ ',left'+left ',top'+top;
+
+            var child = window.open(url, win_name, option);
+            // child 변수에 새 윈도우의 핸들 값 저장.
+
+            var name= document.getElementById('name').value;
+            
+            child.document.getElementById('name_view').innerHTMl=name; 
+            // 자식 윈도우의 바디가 만들어지기 전에 js 넣느라 실행이 안됨.
+
+        }
+    </script>
+</head>
+<body>
+    <h2>첫번째 윈도우</h2>
+    <input type="text" name="name" id="name" placeholder="이름">
+
+    <button onclick="new_window()">전송</button> 
+
+    <!-- <a href="child.html" target="_blank"></a>새 창을 여는 아이를 만들자!js로~ -->
+</body>
+</html>

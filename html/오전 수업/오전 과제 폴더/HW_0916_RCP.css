@@ -1,0 +1,33 @@
+/* HW_0916_RCP.css */
+
+<script>
+
+var set = kidshands; /*/set값을 열고*/
+        function start() {
+            set = setInterval(function () { /*버튼을 누르면 지정 초동안 변화한다. 그값을 set에 넣기.*/
+            // while (true){ /*무한 반복! (next를 무한으로 누른 것과 같다. 과부하 걸릴 수 있어서 여기선 일단 안 쓴다.)*/
+            idx++;
+            if (idx == 3){
+                idx = 1;
+            }
+            var img = document.getElementById("mimg");
+            img.src = "../../image/" + idx + ".png";
+                                }, 1000); /*이게 초 단위! 1초단위*/
+                        }
+
+
+    // 가위바위보
+        // var user = parseInt(prompt("컴퓨터와 가위바위보를 하자...!\n무엇을 낼까? \n>> (1. 가위, 2. 바위, 3.보)"));
+        // var cpu = Math.floor(Math.random() * 3) + 1;
+         if(user != cpu){
+             if( (user == 1 && cpu == 3) || (user == 2 && cpu == 1) || (user == 3 && cpu == 2) ){
+                 document.write("WIN");
+             }else if( (user == 1 && cpu == 2) || (user == 2 && cpu == 3) || (user == 3 && cpu == 1) ){
+                document.write("LOSE");
+             }else{
+                 document.write("나랑 가위바위보 하기 싫어?");
+             }
+         }else{
+             document.write("DRAW");
+         }
+</script>

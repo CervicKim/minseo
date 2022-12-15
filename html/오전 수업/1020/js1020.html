@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name='fm' method="get" action="save.html">
+        <input type="text" name="id" id="id" value="admin">
+        <input type="password" name="pw" id="pw">
+        <input type="date" name="day" id="day">
+        <input type="checkbox" name="fav" id="fav">
+        <a href="javascript".view></a>
+    </form>
+
+    <a href = 'cook_test.html'>이동</a>
+</body>
+</html>
+
+<script>
+     // form : 폼 태그 안의 것들을 쉽게 찾을 수 있다!! 
+        document.fm.id.value         //<- 이름이 fm인 것의 아이디와 값 찾기. id는 안 쓰더라도 name은 꼭 써야 편하다!!!!!!!
+            document.getElementById('day').value        //<- 보다 짧고 빠르다!!
+        
+        document.write('길이 : '+document.forms.length + '<br>'); //form 그 자체의 길이(존재)가 몇인지. 여긴 한 개니까 1개!
+        document.write('첫번째 form name : '+ document.forms[0].name+'<br>');
+        document.write( document.forms.fm.name + '<br>');
+        document.write( document.all.fm.name + '<br>');
+        document.write( document.forms[0].elements[0].value + '<br>');
+        
+
+
+        function view(){
+            var forms = document.forms; //현재 문서의 form을 배열로 받기.
+            //alert(forms.length);
+            for(var i in forms){
+                var tags = forms[i].elements; //해당 form의 tag를 배열로 받기.
+                for(var k in tags){
+                    alert( tags[k].value);
+                }
+            }
+        }
+    /*screen : 화면 정보 제공 (전부 모니터에 따라 달라진다!)
+        screen.width : 화면의 전체 너비 (해상도 너비)
+        screen.height : 화면의 전체 높이 (해상도 높이)
+        screen.availWidth : 실제 사용 가능한 화면 너비
+        screen.availHeight : 실제 사용 가능한 화면 높이
+        screen.colorDepth : 사용 가능한 색상 수
+        screen.pixelDepth : 한 픽셀당 비트의 수 
+        
+        */
+
+    // document 객체들 알아보기.
+        document.write( 'title :'+ document.title + '<br>'); // 현재 문서의 제목이 무엇인지
+        document.write( '마지막 수정일 : ' +document.lastModified+'<br>'); // 마지막 수정 시간이 언제인지
+        document.write( '배경색 : '+document.bgColor+'<br>'); // 제일 기본 배경은 흰색이 아니고! 색이 없다! 
+            document.bgColor='pink'
+        document.write('링크색 : '+document.linkColor+'<br>'); // alinkColor, vlinkColor 로도 링크색 변경 가능!
+            document.alinkColor='red'
+
+    /* 쿠키 : 사용자가 브라우저에 남긴 검색, 입력 이력을 저장해 놓은 것.
+        최대 300개까지 사용가능. 하나의 쿠키 크기는 4KB로 제한. (약)
+        쿠키 정보는 HTTP헤더를 통해 클라이언트 브라우저와 서버가 공유된다.
+        사용자의의해 웹페이지가 요청되면 Set-Cookie 필드에 의해 쿠키가 브라우져거 저정
+            Set-Cookie : 유효기간, 보안정보등을 포함
+            사용자가 다시 같은 페이지를 요청했을 때 저장되어있던 쿠키가 발견되면 브라우저는 
+            웹 페이지를 요청하는 헤더에 쿠키필드를 포함하여 전송한다.
+            Set-Cookie 구조
+            - name : 생성될 쿠키의 이름
+            - 값 : 쿠키에 저장될 데이터
+            - expires : 유효기간 지정
+            - path : 저장된 쿠키와 일치하는 url의 path와 도메인값이 일치하는
+                    url에 페이지를 요청하게 되면 해당쿠키가 서버로 전달한다.
+            - domain : url의 도메인 부분을 정의하는 것.
+            - secure : 데이터 전송 시 보안을 위한 프로토콜을 지정할 때 사용.
+    */
+    setCookie("name","kim","1");
+    function setCookie(쿠키이름, 데이터, 유효기간){
+        const day = new Date();
+        day.setTime(day.getTime() + (유효기간*24*60*60*1000)); // *1000: ms 표현
+        let expires = "expires=" + day.toUTCString();
+        document.cookie = 쿠키이름+"="+데이터+";"+expires+";path=/";
+
+    }
+    function getCookie(){
+        let decode_cook = decodeURIComponet(document.cookie);
+        let temp = decode_cook.split(";");
+        for(let i = 0; i < temp.length; i++){
+            let c = temp[i];
+            while(c.charAt(0) == ""){
+                c = c.substring(1);
+            }
+            if(c.indexOf("name=") == 0){
+                alert(c.substring("name=".length, c.length));
+            }
+        }
+    }getCookie();
+
+    /*html 문서 (문제 .1)
+    1. html_set.html
+    2. index.html
+
+    html_set.html에서 배경색, 글씨크기를 쿠키에 저장하기
+    input을 이용하여 배경색과 글씨크기 입력 후, 쿠키 저장 버튼을 클릭하면 쿠키로 저장.
+    배경색 쿠키 이름: bg / 글씨크기 쿠키 이름 : fontsize
+
+    index.html 문서를 열었을 때,  쿠키에 저장 되어있는 값으로. 배경색과 글씨 크기가 적용되어야 함.
+
+    글씨 크기 적용 여부를 보기위해, index.html에 <p>테스트</p> 작성. */
+</script>

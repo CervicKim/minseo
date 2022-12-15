@@ -1,0 +1,60 @@
+
+////////////////////////////////////////////////////////
+================== 고객 정보
+
+user_ID		고객 아이디
+name		이름
+date_of_birth	생년월일
+age		나이
+address		주소
+phone_number		핸드폰 번호
+e-mail		이메일
+
+////////////////////////////////////////////////////////
+======== 회원 관리 
+
+
+user_number		회원 번호
+means_of_payment		결제수단
+Payment_date 		결제일
+Payment_Expiration_Date 	결제 만료일
+member_ship 		멤버쉽
+Price			가격
+join_date			가입 날짜
+Dormant_account_status		휴면계정여부
+Adult_authentication		성인인증여부
+Withdrawal_status		탈퇴여부
+user_ID 			고객 ID
+Business_number 		사업자 번호
+
+
+////////////////////////////////////////////////////////
+========OTT 테이블 요소
+
+Approval_number		승인 번호
+means_of_payment		결제수단
+Payment_date 		결제일
+Payment_Expiration_Date 	결제 만료일
+member_ship 		멤버쉽
+Price			가격
+join_date			가입 날짜
+Dormant_account_status		휴면계정여부
+Adult_authentication		성인인증여부
+Withdrawal_status		탈퇴여부
+user_ID 		고객 ID
+Business_number 		사업자 번호
+
+
+////////////////////////////////////////////////////////
+=========OTT 영상(콘텐츠) 테이블 요소
+
+video_type		영상타
+Genre			장르
+GPA			평점
+Total_number_of_episodes 		회차수
+video_Rating		관람등급
+year_of_public_open	공개 년도
+video_title		영상 제목
+Business_number		사업자 번호
+
+

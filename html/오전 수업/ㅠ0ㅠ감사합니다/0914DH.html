@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 랜덤함수 Math.floor(Math.random()*ㅁ)+ㅁ
+        // Math.floor: 소수점 자리 제거. Math.floor(3.14, 1) >> 3.1
+        // Math.random(): 랜덤함수. 0.000... ~ 0.999...
+
+        // 가위바위보
+        // var user = parseInt(prompt("컴퓨터와 가위바위보를 하자...!\n무엇을 낼까? \n>> (1. 가위, 2. 바위, 3.보)"));
+        // var cpu = Math.floor(Math.random() * 3) + 1;
+        // if(user != cpu){
+        //     if( (user == 1 && cpu == 3) || (user == 2 && cpu == 1) || (user == 3 && cpu == 2) ){
+        //         document.write("WIN");
+        //     }else if( (user == 1 && cpu == 2) || (user == 2 && cpu == 3) || (user == 3 && cpu == 1) ){
+        //         document.write("LOSE");
+        //     }else{
+        //         document.write("나랑 가위바위보 하기 싫어?");
+        //     }
+        // }else{
+        //     document.write("DRAW");
+        // }
+
+        // 주차요금
+        // var time = parseInt(prompt("주차시간(분단위): "));
+        // var cost = 1000;
+        // var hour = parseInt(time / 60);
+        // var min = time % 60;
+        // if(time >= 40 && time < 120){
+        //     cost = 1000 + parseInt((time - 30) / 10) * 100;
+        //     document.write("주차시간: " + hour + "시간 " + min + "분 || 주차요금: " + cost +"원");
+        // }
+        // else if(time >= 120 && time < 240){
+        //     cost = 1700 + parseInt((time - 120) / 10) * 100
+        //     document.write("주차시간: " + hour + "시간 " + min + "분 || 주차요금: " + cost +"원");
+        // }
+        // else if(time >= 240 && time < 480){
+        //     cost = 2700 + parseInt((time - 240) / 10) * 100
+        //     document.write("주차시간: " + hour + "시간 " + min + "분 || 주차요금: " + cost +"원");
+        // } 
+        // else if(time >= 480){
+        //     cost = 5000;
+        //     document.write("주차시간: " + hour + "시간 " + min + "분 || 주차요금: " + cost +"원");
+        // }
+        // else{
+        //     document.write("주차시간: " + hour + "시간 " + min + "분 || 주차요금: " + cost +"원");
+        // }
+
+        // var phone = '01012341234';
+        // if(phone.indexOf('-') != -1){
+        //     alert("-는 빼고 입력해주세요.");
+        // }
+
+        ///////////////////////////////////////////////////////////////////////////////
+//switch문과 if문의 차이점
+    //if문: 참 / 거짓에 의해서 동작.
+    //switch문 : 선택에 의한 동작.
+    // ㄴswitch문에서는 참과 거짓의 결과가 나오는 조건식을 사용하지 않는다!
+    // ㄴswitch문은 프로그램에서 가장 큰 조건문 작성에 사용된다.
+    // 메뉴, 마우스, 키보드, 프로그램 창 이동등의 선택(클릭)여부 등..
+
+    // var num = 30;
+    //         //(아래 조건: 조건식이 아니고 그냥 조건! 조건식은 참과 거짓을 구별하는 기준이라 안 씀!!)
+    // switch(num){//case 타입을 하나로 통일하기! 숫자는 숫자끼리 문자는 문자끼리~
+    //     case 1:
+    //     case 8:
+    //     case 5:
+    //         document.write('5를 선택했다.');
+    //         break;
+    //     case 11:
+    //         document.write('11을 선택했다.');
+    //         break;
+    //     case 25:
+    //         document.write('25를 선택했다.');
+    //         break;
+    //     case 10:
+    //         document.write('10을 선택했다.');
+    //         break;
+    //     default:
+    //         document.write('잘못 선택했습니다.');
+    // }
+
+    /////
+    // var select = prompt('1. 데이터 저장 2. 데이터 삭제 3. 데이터 추가 4. 데이터 수정 5. 종료');
+
+    // switch(selet){
+    //     case 데이터저장:
+    //         break;
+    //     case 데이터삭제:
+    //         break;
+    //     case 데이터추가:
+    //         break;
+    //     case 데이터수정:
+    //         break;
+    //     case 종료:
+    //         break;
+    //     default:
+    //         document.write('메뉴를 다시 선택하시오');
+    // }
+//-------
+//가위바위보 랜덤함수 사용
+//랜덤값 1 가위 2바위 3보
+//랜덤값에 따라서 현재 가위바위보중 무엇을 냈는지 출력
+//switch문으로 구현
+
+//     var rork_scissors_paper = Math.floor(Math.random()*3)+1;
+
+//     switch(rork_scissors_paper){
+//         case 1:
+//             document.write('가위!');
+//             break;
+//         case 2:
+//             document.write('바위!');
+//             break;
+//         case 3:
+//             document.write('보!');
+//             break;
+//         default:
+//         document.write('잘못 선택했습니다. 가위, 바위, 보 중 하나를 쓰세요');
+// }
+//==========선생님 답=====
+    // var user = parseInt(prompt('1. 가위 2. 바위 3. 보! 숫자를 고르시오!'));
+    // var com = Math.floor(Math.random()*3)+1;
+
+    // switch(user - com){ //1(가위)-2(바위)= -1 <= case -1: 패배. 이런식으로 계산해서 값을 입력해야..ㅠㅠ 
+    //     case -2:
+    //     case 1:
+    //         document.write('승리!');
+    //         break;
+    //     case 2:
+    //     case -1:
+    //         document.write('패배ㅠㅠ');
+    //         break;
+    //     case 0:
+    //         document.write('비겼다. 계속해서~!');
+    // }
+
+// 점수 입력 받아서, 90점이상은 'A등급'. 80점 이상이면 'B등급' 70점 이상 'C등급' 나머지는 'F등급'이라고 출력
+
+var myscore = parseInt(prompt('점수를 적으시오'));
+var check = Math.floor(Math.random()*4)+1;
+
+    switch(parseInt(myscore /10)){
+        case 10:
+        case 9:
+            document.write('A등급');
+        break;
+        case 8:
+            document.write('B등급');
+        break;
+        case 7:
+            document.write('C등급');
+        break;
+        default
+            document.write('F등급');
+        
+
+
+
+    }  
+
+
+
+
+    </script>
+</head>
+<body style="background: #688d66;">
+    
+</body>
+</html>
