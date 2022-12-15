@@ -1,0 +1,13 @@
+vs코드에서 스프링 부트하기 위해 깔아야하는 익스텐션들~
+
+1. spring boot tools 설치 
+	(이미 깔아놓은 것들 installed 보고 따라하셈~)
+2. Gradle for Java 코끼리 설치 
+3. spring boot snippets
+4. spring boot dashboard
+5. getter setter Generator
+6. lombok (빨간 고추...)
+
+
+//프리티어를 가져다가(어디서 가져오는진 몰음... 원래 갖다놨던 다른 폴더에서 찾거나 sos를 쳐얗나봄.. 난 다현씨가 줌 ㅠ) jpa폴더에 끌어놓기.. 그래야! 자동완성이 잘뜸 만만세!!ㅠㅜㅠㅠ0ㅠ~!!!
+

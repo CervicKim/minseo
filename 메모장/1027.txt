@@ -1,9 +1,0 @@
-"C:/Bitnami/wampstack-8.1.11-0/apache2/htdocs"
-<Directory "C:/Bitnami/wampstack-8.1.11-0/apache2/htdocs">
-
-
-C:/Bitnami/wampstack-8.1.11-0/apache2/htdocs
-
-헤드가 떨어져있어도 ㄱㅊ아지는 마법.
-dickitd인기먼가
-
