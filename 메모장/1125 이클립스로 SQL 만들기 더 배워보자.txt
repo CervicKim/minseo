@@ -1,0 +1,16 @@
+private int food_seq; //번호
+	private String food_name;
+	private int cost;
+	private int cook_time;
+	private int cal; //칼로리
+	private String allergy; //에러지 ㅋㅋ
+	private int order_quantity; //주문량
+
+
+이클립스에서 SPL 테이블 생성 도우기??!
+어제ㅐ못한 member로 더 공부해보자!
+
+Script에다가 적으면 데이터가 생긴다!
+Insert into 테이블명 (컬럼명, 쫙~, 쓰기)Values('데이터', 들, 잔뜩,)
+
+Insert into food (food_name, cost, cook_time, cal, allergy, order_quantity) values('안먹고싶음' 0 0 0 'X' 1)

@@ -1,0 +1,15 @@
+고급쿼리 (그동안 배운건 일반쿼리)
+
+조인 Join
+: 두 개 이상의 테이블을 동시에 조회할 때 쓴다!
+예시) emp 사원테이블 , dept 회사테이블
+
+deptno : 부서번호
+dname : 부서이름
+loc : 부서위치
+
+select  deptno, loc from dept
+where dname = 'operation'
+
+select dname, deptno from dept
+where loc in ('dallas' , 'boston')

@@ -1,0 +1,22 @@
+이진트리.... 오전
+
+안드로이드워크스페이스 C드라이브에 만들기. (무조건 영어로! 한글인식x)
+android.workspaces
+
+프론트+js = 앱개발! @ㅇ@ㄷㄷㄷ
+
+var empno = $(#'d_empno').val(); 
+if(empno > 9999){
+alert('잘못된 사원 번호입니다.')
+}
+return true
+
+	sql.xml
+<delete id="deleteEmp">
+delete from emp
+where empno=#{empno}
+</delete>
+
+	EmpMapp
+(주석) 2022.12.1 / 이름 / int / 사원 삭제
+int deleteEmp();
