@@ -9,7 +9,7 @@ import urllib.request
 import requests
 
 ##====================================================================자지말자제발.........ㅠ
-scraping.py
+# scraping.py
 # HTTP - 하이퍼텍스트(html) 을 전송하기위한 프로토콜
 # 프로토콜 -  약속, 규약 
 # url -  http://www.naver.com
@@ -73,15 +73,51 @@ import bs4
 
 
 
-url = "https://www.naver.com"
+# url = "https://www.naver.com"
+# html = urlopen(url)
+# html = html.read()
+
+# bsp = bs4.BeautifulSoup(html,"html.parser")
+# temp = bsp.findAll("strong",{"class","current"})
+# print(temp[0].text)
+# for t in temp:
+#     if "현재기온" in t:
+#         print(t.text)
+
+# #print(html)
+
+
+# url = "https://www.naver.com"
+# html = urlopen(url)
+# html = html.read()
+
+# bsp = bs4.BeautifulSoup(html,"html.parser")
+# temp = bsp.findAll("a",{"class","nav"})
+
+# for menu in temp:
+#     print(menu.text)
+
+# #print(html)
+
+
+
+url = "https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y"
 html = urlopen(url)
 html = html.read()
 
 bsp = bs4.BeautifulSoup(html,"html.parser")
-temp = bsp.findAll("strong",{"class","current"})
-print(temp[0].text)
-for t in temp:
-    if "현재기온" in t:
-        print(t.text)
+
+news_ul = bsp.find("ul",{"class","type02"})
+news_li = news_ul.findAll("li")
+
+for li in news_li:
+    strong = li.find("strong")
+    print(strong.text)
+
+
+# temp = bsp.findAll("a",{"class","nav"})
+
+# for menu in temp:
+#     print(menu.text)
 
 #print(html)
