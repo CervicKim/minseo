@@ -1,0 +1,30 @@
+recaptcha에 방금 만든 정보를 저장하자~~!! 
+
+minseo0203
+
+*****키 공유 함부러하면X git에 올려도 안됨!!!!!!!!!!!!!!!!!!!!!!****
+
+사이트 키
+6LejO5YjAAAAAJp_8jXFzpATWsTC_mCJJpHlWBpI
+
+비밀 키
+6LejO5YjAAAAAKqfRePLNSXjQ5FFAo3uBP667F-U
+
+Q: 왜 postmapping을 여기에 썼을까요. 이유는??
+A: ajax에서 type를 post로 정했으니까~!!!
+
+MVC란? : 스프링 외에도 잘 쓰이고, 면접 질문 후보 1위니까 늘 외우셈!!!
+Re
+(C) Controller <- UH
+Service <- 알고리즘, 비즈니스 로직
+Repository <- SQL 
+(V)view적인 html 
+<= 궁금하면 따로 검색하셈... 나도 덜 적은 듯 ㅠ
+
+//////////////////////////////
+
+페이징 처리 X
+
+select 
+* from 네이버웹툰 /=>이렇게쓰면 전체조회니까 웹툰 목록이존나쮸르륵나올것임 ㅠ
+limit 0, 5
