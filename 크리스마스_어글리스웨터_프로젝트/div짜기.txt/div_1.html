@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> (1) 홈페이지 div 나누기 </title>
+<style>
+    body{margin: 0;
+        padding: 0;
+        box-sizing: border-box;}
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;}
+
+    .header{
+        flex-basis: 20%;}
+    
+    .hd_Slender{
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        height: 8%;
+        background-color: blueviolet;}
+
+    .hd_LogoLine{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        height: 80%;}
+
+    .img{margin: 0;
+        padding: 0;
+        background-color: chartreuse; 
+        width: 200px; 
+        height: 200px;
+    }
+
+    #logo{width: 600px; background-color: blue; color:white;}
+    #img_1{width: 700px; background-color: aqua;}
+    #img_2{width: 700px; background-color: aqua;}
+
+    #join_img{width: 200px; height: 220px; background-color: darkblue;}
+
+    .center{
+        background-color: darkgoldenrod;
+        flex-basis: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+    .first_line{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;}
+
+    .animate{
+        z-index: 2;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+    #img_animate_1{align-items: flex-start; z-index: 1;}
+    #img_animate_2{align-items: flex-end; z-index: 1;}
+    #back_1{width: 500px; height: 200px; z-index: 1; align-content: flex-start; background-color: brown;}
+    
+    .second_line{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;}
+
+    .join{
+        padding: 50px 50px 100px;
+        background-color: darkgray;}
+
+    .bt{width: 200px; height: 200px; background-color: darkgreen;}
+
+    /* #img_3{background-color: chartreuse; width: 200px; height: 200px;}
+    #img_4{background-color: chartreuse; width: 200px; height: 200px;}
+    #img_5{background-color: chartreuse; width: 200px; height: 200px;}
+     */
+    
+    .third_line{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;}
+
+#back_2{background-color: darkcyan; justify-content: flex-start; z-index: 1; width: 20%; height: 200px;}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h6 class="hd_Slender">header 가느다란 줄</h6>
+        <div class="hd_LogoLine">
+            <div class="img" id="img_1"> 이미지 1</div>
+            <div class="img" id="logo"><h2> 로고 이미지 </h2></div>
+            <div class="img" id="img_2"> 이미지 2</div>
+        </div> 
+    </div><!--header 끝-->
+        <div class="center">
+            <div class="join">
+                <div id="join_img"> 회원 이미지 </div>
+                <div class="join_info">
+                    <textarea ></textarea>
+                    <div class="input" id="password"></div>
+                </div><!--회원 정보 끝-->
+                </div><!--회원가입 끝-->
+                <div class="center">
+                    <div class="first_line">
+                        <div class="img">이미지 3</div>
+                        <div class="img">이미지 4</div>
+                        <div class="img">이미지 5</div>
+                        <div class="bt" id="painter_bt">버튼1</div>
+                        <div class="bt" id="picPlay_bt">버튼2</div>
+                    </div>
+                    <div class="second_line">
+                        <div id="back_1"> 뒷배경1</div>
+                        <div class="animate" id="img_animate_1"> 둥둥 이미지1 </div>
+                    </div>
+                    <br>
+                    <div class="third_line">
+                        <div class="img">이미지 6</div>
+                        <div class="img">이미지 7</div>
+                        <div class="img">이미지 8</div>
+                        <div id="back_2"> 뒷배경2</div>
+                        <div class="animate" id="img_animate_2">둥둥 이미지2</div>
+                    </div>
+                </div><!--센터 끝-->
+            </div>
+                <div class="footer">
+                    <h2> footer 영역 </h2>
+                </div><!--푸터 끝-->
+            </div> 
+            
+        
+</div><!--container 끝-->
+</body>
+</html>
