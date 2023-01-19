@@ -56,7 +56,7 @@ body, div, ul{
     font-size:19px;
     color: white;
     font-weight: 800;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 #gnb{width: 900px;
 }
@@ -129,30 +129,51 @@ body, div, ul{
     margin-left: 1270px;
     filter: drop-shadow(30px 30px 1px rgb(15, 35, 100));
 }
+#wave{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    /* top:200px; */
+}
 #cover_1{ /*얘를 파도모양 이미지를 만들어서 넣는 것도 조을듯*/
     position: relative;
-    width: 1920px;
+    width: auto;
     height: 1200px;
     background-color: skyblue;
-    border-radius: 50% 50% 40px 10px;
-    top: 100px;
     margin: auto;
 }
 .inner_wrap_1{
     position: absolute;
     width: 1200px;
-    height: 500px;
+    height: 800px;
     background-color: aqua;
-    top: 1100px;
+    top: 250px;
     left: 350px;
     margin: 0 auto;
 }
-#cover_1:nth-of-type(2){
-position: static;
-background: blue;
-}
 #footer{
-    width: 100%;
-    height: 500px;
-    background-color: darkgrey;
+    position: relative;
+    padding: 1px;
+    background-color: rgb(26, 31, 36);
+}
+#footer_texts_area{
+    width: 70%;
+    margin: 100px auto 70px;
+    padding: 0;
+    word-spacing : 5px;
+    color:gray;
+}
+#f_1{
+    line-height: 160%;
+    font-size: 12px;
+    font-weight: 300;
+}
+#f_2{
+    line-height: 300%;
+    font-size: 15px;
+}
+#f_3{
+    line-height: 140%;
+    font-size: 16px;
 }

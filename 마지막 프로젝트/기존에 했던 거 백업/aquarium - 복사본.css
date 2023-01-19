@@ -1,0 +1,179 @@
+/* aquarium.css */
+body, div, ul{
+    padding: 0;
+    margin: 0;
+}
+.contanier{
+    width: 100%;
+    height: 100%;
+}
+/* 헤더 메뉴바 */
+
+
+#header_wrap{
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+}
+#global_wrap{
+    width: 100%;
+    margin: 0;
+    height: 40px;
+}
+#util{
+    float: right;
+    width: 500px;
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 9px 0 10px 0;
+}
+#util li{ /*맨 위 헤더 가운데 정렬 및 로고와 버튼들 추가*/
+    float: left;
+    padding: 0 11px;
+    color: white;
+    font-size: 12px;
+    border-left: 1px solid skyblue;
+}
+
+
+/* 로고 메뉴 */
+
+#logo_menu_wrap{
+    width: 100%;
+    height: 80px;
+    background-color: blueviolet;
+}
+#logo_menu{
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+}
+#logo{
+    width: 300px;
+    height: 60px;
+    font-size:19px;
+    color: white;
+    font-weight: 800;
+    padding-top: 25px;
+}
+#gnb{width: 900px;
+}
+#gnb_menu{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    width: 800px;
+    height: 80px;
+}
+#gnb_menu li{
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    width: 140px;
+    text-align: center;
+}
+#gnb_menu li ul{
+    padding: 0;
+    margin: 0;
+    width: 0;
+    position: relative;
+    opacity: 0;
+    list-style: none;
+}
+#gnb_menu li ul li{
+    position:absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    top: -10px;
+}
+#gnb_menu li:hover ul{
+    position: relative;
+    opacity: 1;
+    /* background-color: brown; */
+    width: 140px;
+    top:10px;
+    z-index: 100;
+}
+#gnb_menu li:hover ul li{
+    position: relative;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: blueviolet;
+}
+#main_img{
+    position: relative;
+}
+.main_image{
+    position: absolute;
+    width: 100%;
+}
+#main_inner{
+    position: absolute;
+    background-color: pink;
+    margin-left: 200px;
+    margin-top: 150px;
+    width: 750px;
+    height: 500px;
+}
+.seahorse{
+    position: relative;
+    top: 100px;
+    margin-left: 1270px;
+    filter: drop-shadow(30px 30px 1px rgb(15, 35, 100));
+}
+#wave{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    /* top:200px; */
+}
+#cover_1{ /*얘를 파도모양 이미지를 만들어서 넣는 것도 조을듯*/
+    position: relative;
+    width: auto;
+    height: 1200px;
+    background-color: skyblue;
+    margin: auto;
+}
+.inner_wrap_1{
+    position: absolute;
+    width: 1200px;
+    height: 800px;
+    background-color: aqua;
+    top: 250px;
+    left: 350px;
+    margin: 0 auto;
+}
+#footer{
+    position: relative;
+    padding: 1px;
+    background-color: rgb(26, 31, 36);
+}
+#footer_texts_area{
+    width: 70%;
+    margin: 100px auto 70px;
+    padding: 0;
+    word-spacing : 5px;
+    color:gray;
+}
+#f_1{
+    line-height: 160%;
+    font-size: 12px;
+    font-weight: 300;
+}
+#f_2{
+    line-height: 300%;
+    font-size: 15px;
+}
+#f_3{
+    line-height: 140%;
+    font-size: 16px;
+}
