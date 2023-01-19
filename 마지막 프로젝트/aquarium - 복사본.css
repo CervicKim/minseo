@@ -3,7 +3,10 @@ body, div, ul{
     padding: 0;
     margin: 0;
 }
-
+.contanier{
+    width: 100%;
+    height: 100%;
+}
 /* 헤더 메뉴바 */
 
 
@@ -14,7 +17,7 @@ body, div, ul{
 }
 #global_wrap{
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     height: 40px;
 }
 #util{
@@ -112,16 +115,44 @@ body, div, ul{
     position: absolute;
     width: 100%;
 }
+#main_inner{
+    position: absolute;
+    background-color: pink;
+    margin-left: 200px;
+    margin-top: 150px;
+    width: 750px;
+    height: 500px;
+}
 .seahorse{
     position: relative;
     top: 100px;
     margin-left: 1270px;
     filter: drop-shadow(30px 30px 1px rgb(15, 35, 100));
 }
-#cover{ /*얘를 파도모양 이미지를 만들어서 넣는 것도 조을듯*/
+#cover_1{ /*얘를 파도모양 이미지를 만들어서 넣는 것도 조을듯*/
     position: relative;
-    width: 100%;
-    height: 800px;
+    width: 1920px;
+    height: 1200px;
     background-color: skyblue;
     border-radius: 50% 50% 40px 10px;
+    top: 100px;
+    margin: auto;
+}
+.inner_wrap_1{
+    position: absolute;
+    width: 1200px;
+    height: 500px;
+    background-color: aqua;
+    top: 1100px;
+    left: 350px;
+    margin: 0 auto;
+}
+#cover_1:nth-of-type(2){
+position: static;
+background: blue;
+}
+#footer{
+    width: 100%;
+    height: 500px;
+    background-color: darkgrey;
 }
